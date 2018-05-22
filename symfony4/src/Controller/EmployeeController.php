@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use Dokify\Application\Service\ApplicationServiceRegistry;
+use Dokify\Application\Service\Employee\ShowEmployeeCommand;
 use Dokify\Application\Service\Employee\ShowEmployeeResponse;
 use Dokify\Application\Web\Action\Employee\Show;
 use Symfony\Component\Routing\Annotation\Route;
@@ -15,13 +16,13 @@ class EmployeeController extends Controller
      */
     public function index()
     {
-        $actionShow = new Show(ApplicationServiceRegistry::commandBus());
-        $httpFactory = ApplicationServiceRegistry::httpFactory();
+        $request = $this->get('request_stack')->getCurrentRequest();
 
-        $request = $httpFactory->createRequest($this->get('request_stack')->getCurrentRequest());
+        $command = new ShowEmployeeCommand(
+            $request->attributes->get('employee')
+        );
 
-        /** @var ShowEmployeeResponse $responseDTO */
-        $responseDTO = $actionShow->__invoke($request);
+        $responseDTO = $this->getCommandBus()->handle($command);
 
         return $this->render('employee/index.html.twig', [
             'controller_name' => 'EmployeeController',

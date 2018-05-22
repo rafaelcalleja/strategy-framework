@@ -3,6 +3,7 @@
 namespace Application\Controller;
 
 use Dokify\Application\Service\ApplicationServiceRegistry;
+use Dokify\Application\Service\Employee\ShowEmployeeCommand;
 use Dokify\Application\Service\Employee\ShowEmployeeResponse;
 use Dokify\Application\Web\Action\Employee\Show;
 use Zend\Mvc\Controller\AbstractActionController;
@@ -12,13 +13,11 @@ class EmployeeController extends AbstractActionController
 {
     public function showAction()
     {
-        $actionShow = new Show(ApplicationServiceRegistry::commandBus());
-        $httpFactory = ApplicationServiceRegistry::httpFactory();
+        $command = new ShowEmployeeCommand(
+            $this->getParam('employee')
+        );
 
-        $request = $httpFactory->createRequest($this->getRequest());
-
-        /** @var ShowEmployeeResponse $responseDTO */
-        $responseDTO = $actionShow->__invoke($request);
+        $responseDTO = $this->getCommandBus()->handle($command);
 
         return new ViewModel(
             [
