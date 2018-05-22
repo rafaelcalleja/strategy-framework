@@ -11,13 +11,23 @@ use Zend\View\Model\ViewModel;
 
 class EmployeeController extends AbstractActionController
 {
+    /**
+     * @var CommandBus
+     */
+    private $commandBus;
+
+    public function __construct(CommandBus $commandBus)
+    {
+        $this->commandBus = $commandBus;
+    }
+
     public function showAction()
     {
         $command = new ShowEmployeeCommand(
             $this->getParam('employee')
         );
 
-        $responseDTO = $this->getCommandBus()->handle($command);
+        $responseDTO = $this->commandBus->handle($command);
 
         return new ViewModel(
             [
