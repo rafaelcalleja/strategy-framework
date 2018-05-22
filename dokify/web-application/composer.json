@@ -1,0 +1,21 @@
+{
+    "name": "dokify/web-application",
+    "description": "web application core",
+    "type": "project",
+    "authors": [
+        {
+            "name": "rafaelcalleja",
+            "email": "rcalleja@dokify.net"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "psr/http-message": "^1.0@dev",
+        "league/tactician": "^2.0@dev"
+    },
+    "autoload": {
+        "psr-4": {
+            "DokifyApplication\\": "src/"
+        }
+    }
+}

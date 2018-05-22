@@ -1,0 +1,6 @@
+Dokify\Domain\Employee\Employee:
+    exclusion_policy: NONE
+
+    properties:
+        name:
+            type: string

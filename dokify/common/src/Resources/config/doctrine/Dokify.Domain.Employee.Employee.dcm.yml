@@ -1,0 +1,4 @@
+Dokify\Domain\Employee\Employee:
+    table: agd_data.empleado
+    fields: ~
+
