@@ -3,23 +3,14 @@
 namespace App\Controller;
 
 use Dokify\Application\Service\ApplicationServiceRegistry;
-use Dokify\Application\Service\Employee\ShowEmployeeCommand;
 use Dokify\Application\Web\Action\Employee\Show;
-use Dokify\Port\Adapter\Messaging\CommandBus;
+use Dokify\Common\Infrastructure\Port\Adapter\Http\TraitController;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 class EmployeeController extends Controller
 {
-    /**
-     * @var CommandBus
-     */
-    private $commandBus;
-
-    public function __construct(CommandBus $commandBus)
-    {
-        $this->commandBus = $commandBus;
-    }
+    use TraitController;
 
     /**
      * @Route("/employee/{employee}", name="employee")
@@ -28,11 +19,7 @@ class EmployeeController extends Controller
     {
         $request = $this->get('request_stack')->getCurrentRequest();
 
-        $command = new ShowEmployeeCommand(
-            $request->attributes->get('employee')
-        );
-
-        $responseDTO = $this->commandBus->handle($command);
+        $responseDTO = $this->handle($request);
 
         return $this->render('employee/index.html.twig', [
             'controller_name' => 'EmployeeController',
