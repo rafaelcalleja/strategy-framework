@@ -2,9 +2,7 @@
 
 namespace App\Controller;
 
-use Dokify\Application\Service\ApplicationServiceRegistry;
 use Dokify\Application\Service\Employee\ShowEmployeeCommand;
-use Dokify\Application\Web\Action\Employee\Show;
 use Dokify\Port\Adapter\Messaging\CommandBus;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;

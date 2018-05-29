@@ -6,13 +6,6 @@
             "options": {
                 "symlink": true
             }
-        },
-        {
-            "type": "path",
-            "url": "../dokify/web-application",
-            "options": {
-                "symlink": true
-            }
         }
     ],
     "type": "project",
@@ -21,7 +14,6 @@
         "php": "^7.0.8",
         "ext-iconv": "*",
         "dokify/common-domain": "dev-master",
-        "dokify/web-application": "dev-master",
         "league/tactician-bundle": "^1.1",
         "sensio/framework-extra-bundle": "^5.1",
         "symfony/asset": "^3.4",

@@ -33,10 +33,6 @@ services:
         arguments: ['@command_bus.inner']
         public: true
 
-    http.factory:
-        class: Dokify\Infrastructure\Symfony\Bridge\Http\HttpFactory
-        public: true
-
     employee.show_employee_handler:
         class: Dokify\Application\Service\Employee\ShowEmployeeHandler
         arguments:

@@ -2,10 +2,8 @@
 
 namespace Application\Controller;
 
-use Dokify\Application\Service\ApplicationServiceRegistry;
 use Dokify\Application\Service\Employee\ShowEmployeeCommand;
-use Dokify\Application\Service\Employee\ShowEmployeeResponse;
-use Dokify\Application\Web\Action\Employee\Show;
+use Dokify\Port\Adapter\Messaging\CommandBus;
 use Zend\Mvc\Controller\AbstractActionController;
 use Zend\View\Model\ViewModel;
 
