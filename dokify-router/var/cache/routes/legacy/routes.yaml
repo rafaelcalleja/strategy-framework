@@ -1,0 +1,29 @@
+route1:
+    path:     /foo
+    defaults: { _controller: 'MyController::fooAction' }
+
+settings-profile:
+    path: /settings/profile
+    defaults: { _controller: Legacy::show, _before: ['login:noChecks'] }
+    methods: [GET]
+    prefix: /app
+    schemes:  [https]
+    host: '10.10.10.10'
+
+settings-profile-control:
+    prefix: /app
+    path: /settings/profile
+    defaults: { _controller: Legacy::show, _before: ['login:noChecks'] }
+    methods: [GET]
+    schemes:  [https]
+    host: '10.10.10.10'
+    #httpsPort: '%symfony_port%'
+
+redirect-outside:
+    prefix: '/symfony'
+    path: /redirect/outside
+    defaults: { _controller: Legacy::show, _before: ['login:noChecks'] }
+    methods: [GET]
+    schemes:  [https]
+    host: 'redirect.example.com'
+

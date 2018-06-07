@@ -1,0 +1,21 @@
+settings-profile:
+Ø    path: /settings/profile
+    defaults: { _controller: \Dokify\Controller\Settings\Profile::show, _before: ['login:noChecks'] }
+    methods: [GET]
+    schemes:  [https]
+    host: '%symfony_host%'
+    #httpsPort: '%symfony_port%'
+
+settings-profile-control-2:
+    prefix: /symfony
+    path: /settings/profile/control
+    defaults: { _controller: \Dokify\Controller\Settings\Profile::show, _before: ['login:noChecks'] }
+    methods: [GET]
+    schemes:  [https]
+    host: '%silex_host%'
+    #httpsPort: '%silex_port%'
+
+
+_application:
+    resource: prefix.yaml
+    prefix: /app/prefix

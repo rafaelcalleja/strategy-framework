@@ -1,0 +1,24 @@
+{
+    "name": "dokify/router",
+    "description": "private router",
+    "type": "library",
+    "authors": [
+        {
+            "name": "rafaelcalleja",
+            "email": "rcalleja@dokify.net"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Dokify\\Router\\": "src/"
+        }
+    },
+    "minimum-stability": "dev",
+    "require": {
+        "symfony/routing": "^4.2@dev",
+        "symfony/config": "^4.2@dev",
+        "symfony/yaml": "^4.2@dev",
+        "symfony/finder": "^4.2@dev",
+        "symfony-cmf/routing": "^2.1@dev"
+    }
+}
