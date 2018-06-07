@@ -1,0 +1,2 @@
+define(["storage/engine/localcache","storage/itemfactory","polyfill/object"],function(a,b){function c(){this.localStorage=window.sessionStorage;this.itemFactory=new b();
+}c.prototype=Object.create(a.prototype);c.prototype.constructor=c;return c;});

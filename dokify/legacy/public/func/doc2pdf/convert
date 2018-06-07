@@ -1,0 +1,5 @@
+#!/bin/bash 
+CONVERTER="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )/DocumentConverter.py"
+/usr/bin/openoffice.org "--accept=socket,host=localhost,port=8100;urp;StarOffice.ServiceManager"s
+python $CONVERTER $1 $2
+

@@ -1,0 +1,72 @@
+/*
+Syntax error: Invalid CSS after "	a": expected expression (e.g. 1px, bold), was ".protocol,"
+        on line 39 of /home/jandres/www/dokify/src/js/navigation.js
+
+34: 				reverse[value] 	= key;
+35: 			}
+36: 		}
+37: 
+38: 		return {
+39: 			protocol: 	a.protocol,
+40: 			hostname: 	a.hostname,
+41: 			pathname: 	a.pathname,
+42: 			search: 	a.search,
+43: 			query: 		params,
+44: 			reverse: 	reverse,
+
+Backtrace:
+/home/jandres/www/dokify/src/js/navigation.js:39
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/scss/parser.rb:1148:in `expected'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/script/lexer.rb:199:in `expected!'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/script/parser.rb:486:in `assert_done'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/script/parser.rb:50:in `parse'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/script/parser.rb:166:in `parse'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/script.rb:31:in `parse'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/engine.rb:881:in `parse_script'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/engine.rb:608:in `parse_property'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/engine.rb:597:in `parse_property_or_rule'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/engine.rb:578:in `parse_line'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/engine.rb:471:in `build_tree'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/engine.rb:490:in `append_children'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/engine.rb:489:in `each'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/engine.rb:489:in `append_children'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/engine.rb:480:in `build_tree'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/engine.rb:473:in `each'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/engine.rb:473:in `build_tree'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/engine.rb:490:in `append_children'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/engine.rb:489:in `each'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/engine.rb:489:in `append_children'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/engine.rb:480:in `build_tree'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/engine.rb:473:in `each'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/engine.rb:473:in `build_tree'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/engine.rb:490:in `append_children'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/engine.rb:489:in `each'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/engine.rb:489:in `append_children'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/engine.rb:480:in `build_tree'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/engine.rb:473:in `each'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/engine.rb:473:in `build_tree'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/engine.rb:490:in `append_children'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/engine.rb:489:in `each'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/engine.rb:489:in `append_children'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/engine.rb:345:in `_to_tree'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/engine.rb:315:in `_render'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/engine.rb:262:in `render'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/plugin/compiler.rb:362:in `update_stylesheet'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/plugin/compiler.rb:203:in `update_stylesheets'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/plugin/compiler.rb:201:in `each'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/plugin/compiler.rb:201:in `update_stylesheets'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/plugin/compiler.rb:235:in `watch'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/plugin.rb:107:in `send'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/plugin.rb:107:in `method_missing'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/exec.rb:452:in `watch_or_update'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/exec.rb:315:in `process_result'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/exec.rb:41:in `parse'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/exec.rb:21:in `parse!'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/sass:9
+/usr/local/bin/sass:23:in `load'
+/usr/local/bin/sass:23
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Syntax error: Invalid CSS after \"	a\": expected expression (e.g. 1px, bold), was \".protocol,\"\A         on line 39 of /home/jandres/www/dokify/src/js/navigation.js\A \A 34: 				reverse[value] 	= key;\A 35: 			}\A 36: 		}\A 37: \A 38: 		return {\A 39: 			protocol: 	a.protocol,\A 40: 			hostname: 	a.hostname,\A 41: 			pathname: 	a.pathname,\A 42: 			search: 	a.search,\A 43: 			query: 		params,\A 44: 			reverse: 	reverse,"; }

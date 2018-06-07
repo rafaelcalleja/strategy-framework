@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<plugin>
+	<nombre>Zipper</nombre>
+	<descripcion>Descargar documentación en zip</descripcion>
+	<aplicacion>
+		<id>zipper@jandres</id>
+		<version>1.1</version>
+		<creador>Jose Ignacio Andres</creador>
+	</aplicacion>
+</plugin>

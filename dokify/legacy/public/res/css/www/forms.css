@@ -1,0 +1,63 @@
+/* FORMULARIOS */
+
+.loginLabel {
+	width: 300px;
+	margin: 0px 0px 0px 5px;
+	padding: 0px;
+	display: block;
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+}
+
+.partnerLabel {
+	width: 30px;
+	margin: 0px 0px 0px 5px;
+	padding: 0px;
+	display: block;
+	font-family: Arial, sans-serif;
+}
+
+.partnerTextfield {
+	width: 80%;
+	height: 22px;
+	margin: 3px 0px 10px 5px;
+	padding: 4px 6px;
+	border: 1px solid #C1C1C1;
+	display: block;
+	font-family: Arial, sans-serif;
+	color: #333;
+	border-radius: 3px;
+	box-shadow: 0 0 6px 3px #eee;
+}
+
+.loginTextfield {
+	width: 80%;
+	height: 22px;
+	margin: 3px 0px 10px 5px;
+	padding: 4px 6px;
+	border: 1px solid #C1C1C1;
+	display: block;
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+	color: #333;
+	border-radius: 3px;
+	box-shadow: 0 0 6px 3px #eee;
+}
+.loginTextfield:hover, .loginTextfield:focus { border-color: #ee9014; 	box-shadow: 0 0 6px 1px #ee9014; }
+
+.loginSubmit {
+	margin: 0px 0px 10px 5px;
+	padding: 8px 16px;
+	border: 1px solid #ee9014;
+	display: block;
+	font-family: Arial,Helvetica,sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	color: #fff;
+	cursor: pointer;
+	background-color: #ee9014;
+	border-radius: 10px;
+	text-shadow: 1px 1px 2px #493317;
+	box-shadow: 0 0 4px 1px #c1c1c1;
+}
+.loginSubmit:hover { 	background-color: #ff940a; }

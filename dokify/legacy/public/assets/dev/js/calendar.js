@@ -1,0 +1,5 @@
+define(["modal","vendor/fullcalendar.min"],function(a){function b(){var f,d,h;h=false;f=this;d=janddress.getCurrent(true);function g(m){var l,i,k;l=d.parseURI();
+i=l.query.viewType;k=l.query.time;if(h==false){if(k&&m.calendar.getDate().getTime()!=k){var j=new Date(parseInt(k,10));m.calendar.gotoDate(j);}return(h=true);
+}l.query.time=m.start.getTime();janddress.set(l.build());return false;}function e(k){var j,i;i=d.parseURI();j=k.start.getFullYear()+"-"+(k.start.getMonth()+1)+"-"+k.start.getDate();
+i.pathname+="/"+j;i.query.type=k.type;i=i.build();a.load(i);}function c(){$(f).fullCalendar({header:{left:"",center:"prev,title,next",right:""},eventSources:[d],timeFormat:"HH:mm",aspectRatio:3,firstDay:1,viewDisplay:g,eventClick:e,loading:function(i){if(i===true){$(f).addClass("loading");
+}else{$(f).removeClass("loading");}}});}require.css("/css/calendar.css",c,{selector:"#calendar",prop:"overflow",value:"auto"});}return{init:b};});

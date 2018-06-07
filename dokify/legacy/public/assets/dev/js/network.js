@@ -1,0 +1,12 @@
+define(["getcontent"],function(a){function b(e){if(e.content){$.each(e.content,function(g,h){if(h===null){h=undefined;}a.cache[g]=h;});}if(e.ga&&window.ga){$.each(e.ga,function(){ga("send","event",this.category,this.action,this.label,this.value);
+});}if(e.stop){$(document).trigger("navigate:stop");}if(e.alert){alert(e.alert);}if(e.reload!==undefined){$(document).trigger("reload");}if(e.tour!==undefined){require(["tour"],function(g){tour=new g(e.tour);
+tour.fetch();});}if(e.show!==undefined){$(e.show).show();}if(e.dom!==undefined){$.each(e.dom,function(g,h){g=g.find();if(h===true){g.show();}else{if(h===false){g.hide();
+}else{if(typeof(h)==="object"){$.each(h,function(j,i){c(g,j,i);});}else{g.show();g.html(h);$(document).trigger("redraw",g);}}}});}var f=["message","message:ok","message:info","message:error"];
+$(f).each(function(){var g=this.toString();if(e[g]){$(document).trigger(g,[e[g]]);}});if(e.location){$(document).trigger("navigate:stop");janddress.go(e.location);
+}if(e.state){janddress.set(e.state);}if(e.render){require(["modal"],function(g){g.show(e.render);});}else{if(e.modal){if(typeof e.modal==="string"){require(["modal"],function(g){g.load(e.modal);
+});}else{if(e.modal===true){require(["modal"],function(g){g.fadeIn();});}}}else{$(document).trigger("modal:hide");}}if(e.refresh!==undefined){return location.reload();
+}if(e.href!==undefined){return location.href=e.href;}}function c(e,g,f){if("add-class"===g){e.addClass(f);}else{if("remove-class"===g){e.removeClass(f);
+}}}function d(f,e,g){var h=g.getResponseHeader("Content-type");if(h.indexOf("application/json")!==-1){return b(f);}}$(document).on("json:response",function(g,f){b(f);
+});$(document.body).on("click","a.submit, button.submit",function(i){i.preventDefault();var f,h,g,j;f=$(this);g=f.hasClass("loading");j=f.attr("method")||"POST";
+if(g){h=$(document.createElement("span")).html("Loading...");h.insertAfter(f);f.hide();}$.ajax({type:j,url:this.href||f.attr("href"),data:$(this).data("post"),success:d,error:function(){if(g){f.show();
+h.remove();}}});});return{parseResponse:d};});

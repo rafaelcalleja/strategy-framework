@@ -1,0 +1,10 @@
+define(function(){var a={};a.controller=function(m,f,g,e,d,j,c,b,l){var i,k;i=j.access(c);k=i==="ok"&&c.completed===false;ownCheckin=angular.inCollection(c.checkin_profile,d.profiles);
+if(false===ownCheckin&&false===c.is_near){k=false;}c.is_own=ownCheckin;c.access=i;c.can_checkout=k;c.checkin_date=c.checkin_date*1000;c.duration=c.duration*1000;
+if(c.checkout_date){c.checkout_date=c.checkout_date*1000;}m.dokireader=document.cookie.indexOf("dokireader")!==-1;m.checkin=c;m.Checkout=function(){if(c.can_checkout!==true){return;
+}c.can_checkout=false;l.loading=true;f.eventTrack("Check-out",{category:"Checkin",label:c.employee.name});j.checkout({checkin:c.uid},function(){l.loading=false;
+c.completed=true;});};var h=m.$watch("display_more",function(){if(m.display_more!==true){return;}h();var r=g.find("googlemap")[0];var q=new b.Map(r,{mapTypeId:b.MapTypeId.ROADMAP,mapTypeControlOptions:{mapTypeIds:[b.MapTypeId.ROADMAP]},streetViewControl:false});
+var p=new b.LatLngBounds();var o=new b.LatLng(c.location.latitude,c.location.longitude);var n=new b.Marker({map:q,title:c.user.name+" "+c.user.surname,position:o,optimized:false});
+p.extend(n.position);e(function(){b.event.trigger(q,"resize");q.setCenter(p.getCenter());q.setZoom(14);},100);});l.loading=false;};a.controller.$inject=["$scope","$analytics","$document","$timeout","loginData","Checkin","checkinData","Maps","Layout"];
+a.resolve={loginData:["Login",function(b){return b.get().$promise;}],Maps:["MapService",function(b){return b.$promise;}],checkinData:["$route","Checkin","Layout",function(e,b,c){if(!e.current.params.checkin){var d=angular.toJson(e.current.params);
+throw new Error("missing checkin parameter ["+d+"]");}return b.get({checkin:e.current.params.checkin},function(f){c.setTitle(f.employee.name);}).$promise;
+}]};a.templateUrl="/app/mobile/checkin/show.html";return a;});

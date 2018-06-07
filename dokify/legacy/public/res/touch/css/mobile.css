@@ -1,0 +1,30 @@
+#top-bar .right { float: none; }
+div#main-menu { float: none; width: auto; height: auto; text-align: center; border-bottom: 1px solid #353638; }
+div#main-menu ul li { display: inline-block; padding: 8px 3px; border-bottom: 0px;}
+div#main-menu ul li div.line-block { display: none; }
+div#main-menu ul li img { margin-right: 0; width: 26px; height: 26px; }
+div#page-content { float: none; overflow: visible; width: 100% !important; clear: both;}
+
+#top-bar a#profile-link, #top-bar a#help-link { display: none; }
+
+input#search-box { width:200px; }
+
+#home td.right-col { display: none; }
+
+
+table#table-data td {  display: none; }
+table#table-data td.checkbox-colum {  display: table-cell; }
+table#table-data td.checkbox-colum + td {  display: table-cell; }
+
+
+div#box-layer {
+	width: 100% !important;
+	height: auto !important;
+	margin-top: 49px;
+	display: none;
+	position: absolute;
+	overflow: visible;
+}
+
+form#ficha-elemento { width: 100%; overflow: auto; }
+.cboxButtons a.btn { float: left; display: block; }

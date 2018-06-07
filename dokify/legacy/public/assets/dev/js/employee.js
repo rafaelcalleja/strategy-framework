@@ -1,0 +1,4 @@
+define(function(){var a={};a.controller=function(d,c,b,f,e){d.employee=c;e.loading=false;d.tab="companies";d.showCheckins=function(){d.tab="checkins";if(d.checkins===undefined){d.checkins=b.query({employee:c.uid});
+}};d.showCompanies=function(){d.tab="companies";};d.showAssigns=function(){d.tab="assigns";if(d.assignments===undefined){d.assignments=f.query({employee:c.uid});
+}};};a.controller.$inject=["$scope","employeeData","Checkin","Assignment","Layout"];a.resolve={loginData:["Login",function(b){return b.get().$promise;}],employeeData:["$route","Employee","Layout",function(d,b,c){return b.get({employee:d.current.params.employee},function(e){c.setTitle(e.name);
+}).$promise;}]};a.templateUrl="/app/mobile/employee/show.html";return a;});

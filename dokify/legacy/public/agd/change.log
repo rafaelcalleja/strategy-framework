@@ -1,0 +1,534 @@
+1.4.9
+	- 	Importantes mejoras de rendimiento
+	- 	Ayudas para mejorar el servicio de atención al usuario
+	-	Se introduce en fase beta el nuevo buscador
+	-	Actualizar ficheros de idioma
+	-	Habilitar el cambio de idioma sin necesidad de abandonar la aplicación
+
+-----------------------------------------------------------------------------------------------------
+
+
+1.4.8
+	- 	Gestión de EPIs
+	- 	Módulo de Salud
+	- 	Control de bajas
+	- 	Citas y convocatorias médicas
+	- 	Documentos dinámicos
+	- 	Gestión de categorias para los agrupamientos
+	- 	Gestión de centros de cotización
+	- 	Optimización de la aplicación y actualización de librerías
+	- 	Correción de bugs
+
+
+-----------------------------------------------------------------------------------------------------
+
+
+1.4.7
+	-	Se introduce los códigos QR
+	-	Nueva ficha de empleados
+	-	Rediseño de la ventana de anexar
+	-	Mejoras en la versión móvil
+	-	Solución de bugs y correcciones internas	
+-----------------------------------------------------------------------------------------------------
+
+
+1.4.6
+	-	Control de algunos campos de entrada como DNI, NIF, etc..
+	-	Nueva barra superior para mejorar el diseño y la usabilidad
+	-	Filtros rápidos de documentación para empresas
+	-	Posibilidad de caducar documentación de forma semi-automática al quitar un agrupador de una empresa, empleado o maquina
+	-	Mejoras en el rendimiento
+	-	Mejoras en la gestión de los agrupadores de tipo tarea
+	-	Nueva funcionalidad para clientes: "Mis empresas" (grafico de relación de empresas)
+	-	Se permite asociar ciertos documentos a un parque, zona, centro, etc.. para que se asigne de forma automática al anexar
+	-	Nuevo comando de busqueda attr:id para localizar mas facilmente documentación
+	-	Ajustes en los avisos de documentación
+	-	Se añade una descripción mas clara para los "solicitantes" al pasar con el puntero
+	-	Funciones de corporación
+	-	Corrección de bugs
+	
+	
+-----------------------------------------------------------------------------------------------------
+
+
+1.4.5
+	-	Nueva versión de la pantalla de inicio con soporte para búsquedas guardadas
+	-	Corregidos varios bugs
+	-	Nuevos solicitantes de documentación disponibles para configurar
+
+-----------------------------------------------------------------------------------------------------
+
+
+1.4.4
+	-	Interfaz rediseñada. 
+	-	Soporte inicial vía chat
+	-	Mejoras para los usuarios de IE
+	-	Conjunto de mejoras y solucion de bugs
+
+-----------------------------------------------------------------------------------------------------
+
+
+1.4.3
+	-	Nuevas funcionalidades disponibles.
+	
+
+-----------------------------------------------------------------------------------------------------
+
+
+1.4.2
+	-	Se permite buscar elementos filtrando por los activos e inactivos
+	-	Ahora los usuarios de clientes pueden tener permisos especificos en ciertos apartados de la aplicación
+	-	Varios bugs solucionados
+	-	Se permite exportar búsquedas si necesidad de dar usuario y password
+
+
+-----------------------------------------------------------------------------------------------------
+
+
+1.4.1
+	-	Varios bugs solucionados
+	-	Mejorada la usabilidad de ciertos modulos
+
+-----------------------------------------------------------------------------------------------------
+
+
+1.4
+	-	Funcionamiento mejorado para IE
+	-	Optimización de la navegacion. Mejoras en rendimiento / velocidad
+	-	Varios bugs solucionados
+
+-----------------------------------------------------------------------------------------------------
+
+
+RC 1.3
+	-	Bugs corregidos
+	-	Concepto de ayudante integrado en la aplicacion
+	-	Mejoras genericas: certificacion, eventos y mejoras menores
+
+-----------------------------------------------------------------------------------------------------
+
+
+RC 1.2
+	-	Varios bugs solucionados.
+	-	Cambios internos
+	-	Nuevas funcionalidades para agrupadores
+	-	Ayudas visuales en pagina de asignaciones
+	-	Mejorada la velocidad de navegacion
+	-	Mejorado el uso de IE
+
+-----------------------------------------------------------------------------------------------------
+
+Beta 1.1
+	-	Añadido conjunto de mejoras y usabilidad...
+
+-----------------------------------------------------------------------------------------------------
+
+Beta 1.0
+	-	Lanzmiento versión beta
+
+-----------------------------------------------------------------------------------------------------
+
+
+Alpha 2010.03.05
+	-	Correccion de errores
+	-	Optimización del buscador
+
+-----------------------------------------------------------------------------------------------------
+Alpha 2010.02.25
+	-	Plugin para importaciones masivas
+	-	Skin para clientes
+
+-----------------------------------------------------------------------------------------------------
+Alpha 2010.02.18
+	-	Sistema de autoasignacion de agrupadores
+	-	Sistema de auto des-asignacion de agrupadores especificando la duracion
+
+-----------------------------------------------------------------------------------------------------
+Alpha 2010.02.17
+	-	Limitar visibilidad por agrupamiento
+	-	Limitar visibilidad por etiqueta
+
+
+-----------------------------------------------------------------------------------------------------
+Alpha 2010.02.16
+	-	Errores en documentos
+	-	Ocultar fecha de creacion de atributos de documento
+	-	Añadir referencia al cliente en la tabla de atributos de documento
+	-	Auto-limpiar etiquetas de documentos al eliminarlas de un cliente
+	-	Limitar visibilidad de tipos de documentacion a clientes
+
+
+-----------------------------------------------------------------------------------------------------
+Alpha 2010.02.15
+	-	Filtro de elementos en usuario via etiquetas
+
+
+-----------------------------------------------------------------------------------------------------
+Alpha 2010.02.12
+	-	Filtro de documentación por solicitante
+	-	Ajustes en la cache de navegacion
+
+
+-----------------------------------------------------------------------------------------------------
+Alpha 2010.02.11
+	-	Corregidos varios errores en creación y asignacion de documentos
+	-	Solicitar documentación has el tercer nivel de subcontratación
+
+
+-----------------------------------------------------------------------------------------------------
+Alpha 2010.02.09
+	-	Habemus webkit
+
+
+-----------------------------------------------------------------------------------------------------
+Alpha 2010.02.09
+	-	Corregido bug al modificar empresas
+	-	Añadidos indices foreign key y unique a la tabla agrupamiento_cliente
+	-	Metodo hasAttribute de documentos, indicaba en verSolicitantes como segundo parametro true, indicando documentos de descarga, deberia ser false
+	-	Errores corregidos en elementos que usan la plantilla plantillahtml.tpl
+
+
+-----------------------------------------------------------------------------------------------------
+Alpha 2010.02.04
+	-	Corregido error en documentos descargables
+
+
+-----------------------------------------------------------------------------------------------------
+Alpha 2010.02.02
+	-	Documentación de plantillas
+	-	Actualizar crear nuevo empleado
+
+
+-----------------------------------------------------------------------------------------------------
+Alpha 2010.02.01
+	-	Usando jquery 1.4
+	-	Estandarizado salida de config::obtenerSolicitantesGlobales con el nuevo objeto "modulo"
+
+
+-----------------------------------------------------------------------------------------------------
+Alpha 2010.01.28
+	-	Sistema de asignacion mejorado
+	-	Corregidos errores js en elementos "list-move"
+	-	Creada asignacion cliente-plugin
+
+
+-----------------------------------------------------------------------------------------------------
+Alpha 2010.01.27
+	-	Estandarizado el sistema de cambio de vista
+	-	Sistema de plugins mejorado
+
+
+-----------------------------------------------------------------------------------------------------
+Alpha 2010.01.26
+	-	Asignacion de campos dinamicos para clientes
+	-	Asignacion de agrupamientos
+	-	Sistema de recuperación de sesion
+
+
+------------------------------------------------------------------------------------------------------
+Alpha 2010.01.25
+	-	Ajustes de idioma para el calendario
+	-	Cambios en el estilo del calendario
+	-	Corregido error en listado de etiquetas
+	-	Listado de campos extensible
+	-	Sistema de campos extensible implantando para empleados
+
+
+------------------------------------------------------------------------------------------------------
+Alpha 2010.01.21
+	-	Añadido calendario de empresa
+
+
+------------------------------------------------------------------------------------------------------
+Alpha 2010.01.21
+	-	Cambiado el editor wysiwyg
+	-	Corregido error de cotejamiento en noticias
+
+
+------------------------------------------------------------------------------------------------------
+Alpha 2010.01.19
+	-	Corregido problema con los avisos
+	-	Sistema de ayudas del buscador
+	-	Rediseñado el buscador (por pantallas con resolucion pequeña)
+
+
+------------------------------------------------------------------------------------------------------
+Alpha 2010.01.18
+	-	Corregidos errores de acceso en tipodocumento y documento
+	-	Solucionado error al crear usuario
+	-	Optimizado quitando imagenes sin src
+
+
+------------------------------------------------------------------------------------------------------
+Alpha 2010.01.15
+	-	Framework js (jquery) actualizado a 1.4 (De momento esta en 1.3 hasta resto de actualizacion por ej colorbox)
+	-	Definido el usuario administrador
+	-	Filtrando tipos de documentos en funcion del cliente
+	-	Limitado el acceso a los perfiles en funcion del usuario que accede
+
+
+------------------------------------------------------------------------------------------------------
+Alpha	2010.01.14
+	-	Añadido parametro en la funcion "accesoElemento" del objeto "usuario", indicamos por defecto que la papelera 
+		no es accible a menos que se indique el tercer parametro
+	-	Mensaje de confirmación al borrar relaciones eliminado
+	-	Error al mostrar la ficha de empresa desde el menu de empresa solucionado
+	-	Añadido control de formulario al crear o editar contactos
+	-	Corregido error de cotejamiento en agrupamientos
+	-	Sistema drag&drop para asignacion de elementos
+	-	Añadido sistema de filtro para elementos asignables
+	-	Posibilidad de asignar una empresa a si misma como subcontrata eliminada
+	-	Rellamada a asignacion del evento line-assign y draggable al clonar un elemento "li" de una asignacion
+	-	Prevenido el borrado de la empresa propia
+	-	Aviso de cliente sin noticias
+
+
+------------------------------------------------------------------------------------------------------
+Alpha	2010.01.13
+	-	Sistema para creacion/borrado de perfiles
+	-	Ajustado el estilo de confirmacion de borrar elemento
+	-	Corregidos errores al asignar empresas
+	-	Añadido acceso directo despues de restaurar elementos de la papelera y corregidos errores de comportamiento
+	-	Sistema de solicitudes de subcontratación funcionando
+	-	Sistema para borrar relaciones implantado
+	-	Ajustes en la visualizacion de documentos. En funcion de quien ve, se muestran mas o menos datos
+	-	Sistema de recuperación de error al cargar, mostramos un link para abrir la página inicial (Si no carga esta, malo XD)
+
+
+------------------------------------------------------------------------------------------------------
+Alpha	2010.01.12
+	-	Error en mostrar datos de documentos de descarga solucionados
+	-	Error al mostrar los estados de los documentos en la página del elemento (empresa, empleado o maquinaria)
+	-	Eliminada la opcion de "Ver Informacion" de las fichas de elementos
+	-	Añadida ficha para empleados
+	-	Creada la ficha para maquina
+	-	Cuando buscamos elementos via documentacion, vemos que tipo de documentación tienen
+	-	Nueva plantilla para error de acceso
+	-	Añadidas claves ajenas en tablas para el auto-borrado de elementos inservibles
+
+
+------------------------------------------------------------------------------------------------------
+Alpha	2010.01.11
+	-	Error en anexion/descarga de documentos descargables corregido
+
+
+------------------------------------------------------------------------------------------------------
+Alpha	2010.01.08
+	-	Control de acceso añadido en configuracion/usuarios
+	-	Aviso de empresa eliminada
+	-	Arreglado bug en la carga de archivos
+	-	Añadido sistema de recuperación cuando ocurre un error al anexar, nos deja el archivo como cargado
+	-	Listado de opciones añadido en el menú de asignaciones
+	-	Corregido error al eliminar un contacto
+	-	Error de duplicidad de opciones eliminado
+	-	Posibilidad de seleccionar el tipo de opciones, en desplegable o en linea
+	-	Opcional tipo de lista desde modificar usuario
+	-	Sistema de busqueda por documentos. Palabra clave "docs". Concatenar con "|". EJ: docs:pendientes|caducados|anulados
+	-	Mostrar el estado de los filtros en la página de documentos
+	-	Se imprime en el campo de busqueda el parametro q de la url
+	-	Mostrar el tamaño del archivo a descargar en los documentos descargables
+	-	Quitados los datos "flags" de la página documentos de un elemento
+
+------------------------------------------------------------------------------------------------------
+Alpha	2010.01.07
+	-	Ajustar el margen de la tabla principal
+	-	Ajustes en listado y guardado de comentarios
+	-	Añadido boton de documentos descargables
+	-	Añadido sistema de anexion de documentos descargables
+	-	Ventana para descargar un archivo relacionado aun documento descargable añadido
+	-	Error al eliminar un atributo de documento corregido
+	-	Informacion rápida de documentos, solo muestra documentos de subida
+	-	Sistema de conteo de descargar implantado
+	-	Corregidos errores de codificacion de la página de noticias
+	-	Atajo de teclado para eliminar elementos CTRL+D, solo seleccionados
+
+
+------------------------------------------------------------------------------------------------------
+Alpha	2010.01.05
+	-	Ajustado evento de aviso de cierre de ventana de upload
+	-	Corregido error que mostraba la fecha de expiración en documentos que no caducan
+	-	Error al calcular la fecha de expiración solucionado
+	-	Bug al asignar etiquetas a documentos corregido
+	-	Añadido sistema de atajos de teclado
+	-	Atajo de teclado nuevo, en las vista de tipo data, CTRL+A: seleccionar todos los elementos
+	-	Atajo de teclado nuevo, en las vista de tipo data, CTRL+N: crear un nuevo elemento
+	-	Ajustado los elementos del menu, que aunque tenian seguirdad de acceso no desaparecian si no eran explicitamente desactivados, 
+		ahora si se desactiva el acceso al modulo, se desactivan las correspondientes opciones en los diferentes modulos con referencias
+	-	Marcar el menu seleccionado en la página de asignaciones
+	-	Aviso de elementos asignables, si no hay se indica
+
+
+------------------------------------------------------------------------------------------------------
+Alpha	2009.12.23
+	-	Ajustado el diseño de los avisos sobre inputs
+	-	Añadido registro de log para acceso a empresas
+	-	Cambiado el modulo usuarios para que no aparezca en el menu
+	-	Sistema de log instalado en listado de tipos de agrupamientos
+
+
+------------------------------------------------------------------------------------------------------
+Alpha	2009.12.22
+	-	Cursor de ayuda para estados de documentos
+	-	Descargar archivos, error corregido
+	-	Cambiar el src de la iframe principal al salir de la pagina para no solicitar dos veces elementos
+	-	Implantada la rutina de control de caducidad
+	-	Parametro para obtener datos de los documentos añadido, true formatear las fechas
+	-	Cambiado el estilo de las ventanas "colorbox"
+	-	Implementado sistema para campos en blanco server y cliente
+	-	Campos controlados al crear empresas
+	-	Campos de empleados controlados al insertar
+	-	Campos de usuario controlados
+	-	Campos de maquina controlados
+	-	Implementado sistema de expresiones regulares cliente-servidor para los campos de entrada
+
+
+------------------------------------------------------------------------------------------------------
+Alpha	2009.12.21
+	-	Sistema de log de errores en para js
+	-	Ajustada la página de espera para quitarse cuando la página este completamente cargada
+	-	Implementado logs de sistema (login, restore, change, anexar, validar, anular)
+
+
+------------------------------------------------------------------------------------------------------
+Alpha	2009.12.18
+	-	Error al crear un usuario en una empresa diferente a la tuya, solucionado
+	-	Cambios en el estilo de los mensajes de alerta en el login
+	-	Seleccion automatica al inicio del primero módulo válido
+	-	Añadido campo para maquinas, nombre
+	-	Añadido sistema de contactos para empresas (altas, bajas y modificaciones)
+	-	Añadidos campos a empresa provincia y localidad
+	-	Campos nombre, para tipos de documento establecido como unique
+	-	Cambiado el estilo del alias (input) al crear un nuevo documento (asistente)
+	-	Corregido error al equivocarte en el asistente de documentos, ahora te permite continuar
+	-	Ancho de la columna de confirmación de informacion en asistente de documentos ajustada
+	-	Ya no se asignan automaticamente los documentos al crear un elemento
+	-	Cambiados parametros al eliminar un contacto de una empresa
+	-	Corregido error al gestionar contactos en empresas que no son la del usuario
+	-	Nueva clase para elementos "help", abre mensaje de ayuda a traves del rel o href(cachea)
+	
+
+------------------------------------------------------------------------------------------------------
+Alpha	2009.12.17
+	-	Cambiado el estilo de los select (html) por el nativo
+	-	Cambios internos en la estructura de las bases de datos (data y core)
+	-	Cambio de estilo del texto al seleccionar lineas
+	-	Login automatico si la session esta iniciada
+	-	Añadido sistema de avisos por cambio de perfil (sin permisos o bloqueados)
+	-	Corregido la seleccion del perfil al modificar usuario
+	-	Corregido error al crear y mostrar los empleados
+	-	Añadido comprobacion recursiva de empresas
+	-	Comprobación de seguridad antes de ejecutar el md5 sobre el fichero
+
+
+------------------------------------------------------------------------------------------------------
+Alpha	2009.12.16
+	-	Añadido sistema de notificaciones para ayudas
+	-	Comportamiento del sistema de notificaciones ajustado
+	-	Solucionado error en el metodo getModuleId que nos devolvia un id_modulo erroneo
+	-	Corregidos errores al crear y configurar usuarios
+	-	Ajustados elementos cuando no se tiene acceso a nada
+	-	Comprobación y explicación de seguridad cuando no se tiene acceso a ningún módulo en la aplicación
+
+
+------------------------------------------------------------------------------------------------------
+Alpha	2009.12.15
+	-	Boton de nuevo documento desde el listado de tipos
+	-	Mejorado el comportamiento del upload (mas información, correccion de errores)
+
+
+------------------------------------------------------------------------------------------------------
+Alpha	2009.12.14
+	-	Corregido el bug al crear nuevos agrupamientos
+	-	Sistema de envio a la papelera ajustado
+	-	Implementado sistema de autologin
+	-	Añadido sistema de ayuda para el buscador
+	-	Comprimido y unificado el css
+	-	Comprimido y unificado el js
+	-	Mejorado el rendimiento global de la aplicación
+	-	Seguridad para el autologin
+	-	Creada la ficha del usuario
+
+
+-------------------------------------------------------------------------------------------------------
+Alpha	2009.12.11
+	-	Añadido control de seguridad al recuperar el password
+	-	Ultimo comentario visible desde la pestaña documentos
+	-	Sistema de permisos implantado para las acciones rápidas (insertar, papelera, accesos directos... )
+	-	Información de navegación en el buscador
+	-	Nuevo campo para usuario: email
+	-	Envio de email al crear un usuario nuevo, según plantilla
+	-	Arreglado bug que te expulsa del programa al iniciar sesion restaurando la clave
+	-	Corregidos errores internos en sql
+
+
+-------------------------------------------------------------------------------------------------------
+Alpha	2009.12.10
+	-	Añadidos elementos en la página de login
+	-	Arreglado el filtro por estado de la documentación
+	-	Mejorado el comportamiento del buscador, se indica que se esta en la pagina 1 al enviar
+	-	Ajustado sistema de accesos
+	-	Mostrar estado de la documentación en la tabla de elementos
+	-	Añadido sistema de clases para los elementos inline
+	-	Solucionado bug del buscador, filtrar elementos por cliente activo
+	-	Añadidos colores para diferenciar los estados
+	-	Ahora podemos indicar enlaces para los elementos inline
+	-	Acceso directo a documentos por tipo
+	-	Diferenciación de sin anexar y sin solicitar
+
+
+-------------------------------------------------------------------------------------------------------
+Alpha	2009.12.9
+	-	Ajustada la altura de la caja de cambio de perfil
+	-	Ajustes en la interfaz de entrada
+	-	Implantación del sistema de cookies
+	-	Ajustada la altura del editor de html
+	-	Boton de cadenas de texto predefinidas en el editor html
+	-	Nuevo diseño del menu de localización
+	-	Corrgido problema al asignar etiquetas a un usuario (perfil)
+
+
+-------------------------------------------------------------------------------------------------------
+Alpha	2009.12.3
+	-	Ajustado el titulo de la página de noticias
+	-	Arreglado el problema con la codificación para los agrupadores en la página de asignación
+	-	Comportamiento del cuadro de busqueda mejorado, no envia si no hay nada
+	-	Arreglado problema de duplicación de eventos al anexar un documento
+	-	Corregido bug al marcar todos los elementos al editar un perfil
+	-	Añadidas nuevas plantillas de email para anular documentos y enviar correo a nuevo usuario
+	-	Añadida la funcionalidad de dejar un motivo de una anulación
+
+
+-------------------------------------------------------------------------------------------------------
+Alpha 2009.12.2
+	-	Añadido efecto de sombreas en los elementos del menu
+	-	Ajustado el buscador, en posicion y aplicadas sombras
+	-	Sombras aplicadas al menu de navegación
+	-	Arreglado creacion de perfiles
+	-	Ajustado el sistema de aviso de campos erroneos
+	-	Corregido el error de alta de usuarios nuevos
+	-	Ajustado el comprotamiento de restauración de contraseña
+	-	Nombre de usuario visible en el menu inferior
+	-	Orden de las noticias cambiado para mostrar la última primero
+	-	Cambios en la plantilla opciones_simple.tpl para una mejor integración
+	-	Tipo de agrupamiento, diferenciados por cliente
+	-	Cambiado el sistema de agrupadores, un agrupador puede estar en varios agrupamientos. Util para la interconexion
+	- 	Sombras aplicadas cuando se selecciona una linea
+	-	Arreglado problema con el conteo interno de las opciones de la clase jsonAGD
+	-	Limitados en el sistema de busqueda las empresas, empleados, maquinas, agrupamientos y quitado el módulo documentos
+
+
+-------------------------------------------------------------------------------------------------------
+Alpha 2009.12.1
+	-	Ajustada la altura del texto del pie de página
+	-	Añadido margen inferiror a la tabla de datos
+	-	Implantado sistema de páginacion para la tabla de empleados y maquinas
+	-	Ajustada la pantalla de edición de perfiles
+	-	Nueva funcionalidad de escritura de comentarios para documentos bajo demanda
+	-	Añadida vista de posicion para el modulo noticias
+	-	Añadida vista de posicion para el modulo agrupamientos
+	-	Ajustada la paginacion
+	-	Implantada la paginación en la tabla de busquedas
+	-	Visor de carga, para que el usuario sepa que esta cargando..
+	-	Corregido el error de mostrar asignaciones
+	-	Arreglado error de envio de solicitantes con espacios
+	-	Corregido error al anexar

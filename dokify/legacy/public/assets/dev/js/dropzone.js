@@ -1,0 +1,13 @@
+define(["interact","network"],function(b,c){function a(h){var e=this;this.dom=$(h);this.origins=this.dom.data("dropzone-origin");function g(i){i=i||document.body;
+$(e.origins,i).each(function(){b(this).draggable({onmove:a.onmove,onend:a.onend});});}function d(j,i){var k=e.dom.parent().offset();if(k.top===0&&k.left===0){return;
+}g(i);$(document).one("redraw",d);}d();var f=false;b(h).dropzone({accept:this.origins,ondropactivate:function(i){$(i.target).addClass("drop-active");$(i.relatedTarget).addClass("drag-active");
+if(false===f){e.begin(i);}},ondragenter:function(i){$(i.target).addClass("drop-target");$(i.relatedTarget).addClass("can-drop");},ondragleave:function(i){$(i.target).removeClass("drop-target");
+$(i.relatedTarget).removeClass("can-drop");},ondrop:function(i){return e.drop(i);},ondropdeactivate:function(i){$(i.target).removeClass("drop-active drop-target");
+$(i.relatedTarget).removeClass("drag-active");}});}a.prototype.begin=function(d){};a.prototype.drop=function(i){var l,f,d,h,e,g,k,j;k=$(i.relatedTarget);
+j=k.data("drag-parent");if(j){k=k.closest(j);}l=this;g=k.data("drag-id");f=this.dom.data("dropzone-drop-url");d=this.dom.data("dropzone-drop-method");h=this.dom.data("dropzone-drop-remove");
+e=this.dom.data("dropzone-drop-reload");if(h===true){k.remove();}if(f!==undefined){f=f.replace(encodeURIComponent("*"),g);$.ajax({method:d||"get",url:f,beforeSend:function(m){m.setRequestHeader("Dropzone","true");
+},success:function(n,m,o){c.parseResponse(n,m,o);if(e){$(document).trigger("reload",l.dom);}}});}};a.onmove=function(f){var g=f.target,d,h,e;e=$(g).data("drag-parent");
+if(e){g=$(g).closest(e).get(0);}d=(parseFloat(g.getAttribute("data-x"))||0)+f.dx;h=(parseFloat(g.getAttribute("data-y"))||0)+f.dy;g.style.webkitTransform=g.style.transform="translate("+d+"px, "+h+"px)";
+g.setAttribute("data-x",d);g.setAttribute("data-y",h);};a.onend=function(e){var f=e.target,d;d=$(f).data("drag-parent");if(d){f=$(f).closest(d).get(0);
+}f.style.webkitTransform=f.style.transform="translate(0px, 0px)";f.setAttribute("data-x",0);f.setAttribute("data-y",0);};a.init=function(){return new a(this);
+};return a;});

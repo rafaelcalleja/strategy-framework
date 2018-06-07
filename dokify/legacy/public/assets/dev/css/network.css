@@ -1,0 +1,64 @@
+/*
+Syntax error: Invalid variable: "$(document).trigger('reload');".
+        on line 7 of /home/jandres/www/dokify/src/js/network.js
+
+2: 
+3: 	// Handler a server response in json
+4: 	function parseJsonResponse (json) {
+5: 
+6: 		if (json.reload !== undefined) {
+7: 			$(document).trigger('reload');
+8: 		}
+9: 
+10: 		if (json.success !== undefined) {
+11: 		
+12: 		}
+
+Backtrace:
+/home/jandres/www/dokify/src/js/network.js:7
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/engine.rb:625:in `parse_variable'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/engine.rb:562:in `parse_line'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/engine.rb:471:in `build_tree'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/engine.rb:490:in `append_children'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/engine.rb:489:in `each'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/engine.rb:489:in `append_children'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/engine.rb:480:in `build_tree'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/engine.rb:473:in `each'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/engine.rb:473:in `build_tree'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/engine.rb:490:in `append_children'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/engine.rb:489:in `each'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/engine.rb:489:in `append_children'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/engine.rb:480:in `build_tree'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/engine.rb:473:in `each'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/engine.rb:473:in `build_tree'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/engine.rb:490:in `append_children'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/engine.rb:489:in `each'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/engine.rb:489:in `append_children'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/engine.rb:480:in `build_tree'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/engine.rb:473:in `each'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/engine.rb:473:in `build_tree'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/engine.rb:490:in `append_children'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/engine.rb:489:in `each'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/engine.rb:489:in `append_children'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/engine.rb:345:in `_to_tree'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/engine.rb:315:in `_render'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/engine.rb:262:in `render'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/plugin/compiler.rb:362:in `update_stylesheet'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/plugin/compiler.rb:203:in `update_stylesheets'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/plugin/compiler.rb:201:in `each'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/plugin/compiler.rb:201:in `update_stylesheets'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/plugin/compiler.rb:235:in `watch'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/plugin.rb:107:in `send'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/plugin.rb:107:in `method_missing'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/exec.rb:452:in `watch_or_update'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/exec.rb:315:in `process_result'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/exec.rb:41:in `parse'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/exec.rb:21:in `parse!'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/sass:9
+/usr/local/bin/sass:23:in `load'
+/usr/local/bin/sass:23
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Syntax error: Invalid variable: \"$(document).trigger('reload');\".\A         on line 7 of /home/jandres/www/dokify/src/js/network.js\A \A 2: \A 3: 	// Handler a server response in json\A 4: 	function parseJsonResponse (json) {\A 5: \A 6: 		if (json.reload !== undefined) {\A 7: 			$(document).trigger('reload');\A 8: 		}\A 9: \A 10: 		if (json.success !== undefined) {\A 11: 		\A 12: 		}"; }

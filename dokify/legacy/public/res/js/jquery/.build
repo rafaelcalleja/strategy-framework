@@ -1,0 +1,11 @@
+#!/bin/bash
+
+echo "" > all.js
+printf "Merging into all.js\n"
+array=(jquery.jgrowl.js jquery-ui-1.10.0.min.js jquery-1.1.0-migrate.min.js jquery.colorbox.js  jquery-ui-effects.js jquery.iphonecheckboxes.js getsize.jquery.min.js extended-cell.min.js shortcut.min.js jquery.ui.timepicker.js jquery.tipsy.js)
+for item in ${array[*]}
+do
+	printf "Adding %s...\n" $item
+	java -jar ../.yuicompressor-2.4.7.jar $item --type js >> all.js
+done
+echo "Done!"

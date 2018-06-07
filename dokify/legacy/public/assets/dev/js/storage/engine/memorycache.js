@@ -1,0 +1,3 @@
+define(["storage/itemfactory"],function(b){function a(){this.data={};this.itemFactory=new b();}a.prototype.clear=function(){this.data={};};a.prototype.remove=function(c){delete this.data[c];
+};a.prototype.exist=function(c){return !!this.data[c]&&((new Date().getTime()-this.data[c].timestamp)<this.data[c].timeout);};a.prototype.get=function(c){return this.data[c].data;
+};a.prototype.set=function(c,e,d){this.remove(c);this.data[c]=this.itemFactory.create(e,d);};return a;});

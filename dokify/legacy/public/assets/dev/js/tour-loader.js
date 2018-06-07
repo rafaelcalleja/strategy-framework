@@ -1,0 +1,7 @@
+define(["dokify","tour","jquery"],function(f,a,c){var d=f.urlCache;function e(h){var g=this;this.dom=h;this.tourNumber=c(h).data("open-tour");c(this.dom).click(function(i){g.openTour();
+});c(this.dom).ready(function(){});}e.prototype.render=function(){var g=this;var h=a.path+g.tourNumber;var i=d.cackeKeyPrefix+h;if(false===d.cacheStorage.exist(i)){c.ajax({url:h,type:"GET"});
+}};e.prototype.openTour=function(){var g,h;g=this.tourNumber;if(!g||0===g.length){return false;}if(true===window.onTour){return false;}if(false!==f.preload){return false;
+}window.onTour=true;h=new a(g);h.fetch();};b.prototype.total=function(){return this.tours.length;};function b(j){var i=this;this.dom=j;this.tours=[];var k=$("[data-target='#help-tours-available']"),h=$("#no-tours-available"),g=$("#help-tours-available");
+c(j).find("[data-open-tour]").each(function(){var l=new e(this);i.tours.push(l);});c(".tour-counter").each(function(){$(this).addClass("hidden");k.addClass("hidden");
+h.show();var l=i.total();$(this).text(l);if(l>0){k.removeClass("hidden");h.hide();$(this).removeClass("hidden");}else{if(true===g.is(":visible")||g.css("display")!="none"){h.hide();
+}}});}b.init=function(){new b(this);};return b;});

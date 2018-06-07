@@ -1,0 +1,13 @@
+ul.block-grid li, header li {display: block;float:left;}
+ul.block-grid.five-up li{width:18%; padding:0 1%;}
+ul.block-grid.four-up li{width:23%; padding:0 1%;}
+header .row, header .column { height: 70px; }
+header li { margin-left: 0 !important; margin-right: 50px !important; }
+#main-image .row .offset-by-six.six { margin-left: 240px; width: 40%; padding: 0 30px; }
+#main-image h1 { margin-top: 40px; }
+#logo img { display:inline;margin-top:16px; }
+#counter .number div { height: 20px; line-height: 14px; padding-top: 18px; }
+#counter .number div hr { margin-top: -14px; }
+footer form { width: 13%; }
+.up, .icon, li.home a { behavior: url(/assets/vendor/iepngfix/iepngfix.htc); }
+.warning-message .icon { display: none; }

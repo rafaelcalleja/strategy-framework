@@ -1,0 +1,10 @@
+define(["vendor/facedetection/jquery.facedetection"],function(){require.css("/css/vendor/jquery-ui/jquery-ui.css");function a(b){this.dom=b;this.container=$(b).closest("div");
+}a.prototype.show=function(){var j=this;if(this.dom.complete===false){this.dom.onload=function(){j.show();};return;}var b=$(this.dom),g,i=70,d={},c,h,f,e;
+this.container.css({width:b.width(),height:b.height(),position:"relative",display:"inline-block",overflow:"hidden"});g=b.faceDetection();if(!g[0]){c=b.position();
+h=this.dom.width/2-i/2;f=this.dom.height/2-i/2;g[0]={positionX:c.left+h,positionY:c.top+f,x:h,y:f,height:i,width:i};}d.x=$(document.createElement("input")).addClass("photo-size").attr({type:"hidden",name:"file[size][0][x]",value:g[0].x}).appendTo(this.container);
+d.y=$(document.createElement("input")).addClass("photo-size").attr({type:"hidden",name:"file[size][0][y]",value:g[0].y}).appendTo(this.container);d.width=$(document.createElement("input")).addClass("photo-size").attr({type:"hidden",name:"file[size][0][width]",value:g[0].width}).appendTo(this.container);
+d.height=$(document.createElement("input")).addClass("photo-size").attr({type:"hidden",name:"file[size][0][height]",value:g[0].height}).appendTo(this.container);
+e=$("<div>",{"class":"block transparent facebox",css:{position:"absolute",left:g[0].positionX+"px",top:g[0].positionY+"px",width:g[0].width+"px",height:g[0].height+"px"}});
+e.draggable({containment:"parent",start:function(){this.initposition=e.position();},stop:function(){var m=e.position(),l=m.left-this.initposition.left,k=m.top-this.initposition.top,o=parseInt(d.x.val(),10),n=parseInt(d.y.val(),10);
+d.x.val(o+l);d.y.val(n+k);}});e.resizable({containment:"parent",aspectRatio:1,stop:function(){d.width.val(e.width());d.height.val(e.height());}});e.appendTo(this.container);
+};a.init=function(){console.log(window.ie);if(window.ie===undefined||window.ie>8){var b=new a(this);b.show();}};return a;});

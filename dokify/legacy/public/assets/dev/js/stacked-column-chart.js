@@ -1,0 +1,3 @@
+define(["vendor/highcharts/highcharts"],function(){function a(c){var b=$(c).data("serie-src");Highcharts.setOptions({lang:{decimalPoint:",",thousandsSep:"."}});
+$.getJSON(b,function(d){$(c).highcharts({chart:{type:"column"},credits:{enabled:false},legend:{enabled:false},title:{text:false},xAxis:{type:"category",labels:{rotation:-45,style:{fontSize:"13px",fontFamily:"Verdana, sans-serif"}}},yAxis:{title:{text:false}},plotOptions:{series:{stacking:"normal"}},series:d});
+});}a.init=function(){return new a(this);};return a;});

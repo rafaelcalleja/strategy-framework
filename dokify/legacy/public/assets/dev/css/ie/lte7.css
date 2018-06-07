@@ -1,0 +1,27 @@
+#main-image .row .offset-by-six.six { padding: 0 3%; width: 44%; }
+footer{margin-top:0}
+.carousel{position:relative;padding-bottom:20px}
+.orbit{width:100%;height:100%}
+#counter .number div{line-height:42px;margin-right:3px}
+#counter .number div hr{margin-top:-28px}
+.row .offset-by-one{margin-left:7.33%}
+.two,.row .two,.one,.row .one,.ten,.row .ten,.four,.row .four,.nine,.row .nine,.five,.row .five,.six,.row .six{padding:0}
+.row form .row .column,.row form .row .columns{padding:0}
+.row.quarter-separate .column,.row.quarter-separate .columns,.block-grid.quarter-separate>*{padding:0}
+input.username,input.password,input.contact,input.company,input.email,input.phone{padding-left:0;text-transform:capitalize;text-indent:40px}
+.row.separate .columns{padding:0 1%}
+.five, .row .five, .row.separate .columns.five { width: 36%; padding: 0 2% !important;}
+.three,.row .three{width:23%}
+.block-grid.five-up>li{width:16%}
+.block-grid.four-up>li{width:21%}
+.block-grid.six-up>li{width:15%}
+.block-grid.ten-up>li{width:8%}
+#breadcrumb{height:32px}
+.map .panel{filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#ffffffff', endColorstr='#ddffffff'); padding:0;}
+.map .panel .circle{margin-top: 20px !important;}
+.tab-content .six.columns.text-center { width: 40%; padding-left: 10%;}
+.block-grid.grid-tabs+i {height:6px;width:6px;}
+.border-shadowgrey {behavior: none;}
+.bubble .quote { display: none;}
+#start button { margin: 1px 0 0 5px;}
+#start .circle {margin-top:12px;}

@@ -1,0 +1,47 @@
+comentario = comentario_elemento
+usuario = nombre_usuario
+documento-nombre = nombre_documento
+elemento-tipo = tipo_elemento
+elemento-nombre = nombre_elemento
+empresa-nombre = nombre_empresa
+link = link
+password = password
+documentos-empresa = documentos_empresa = = true
+documentos-empleado = documentos_empleado = = true
+documentos-maquina = documentos_maquina = = true
+empresa-cif = cif_empresa
+empresa-superior-nombre = superior_nombre
+empresa-superior-cif = superior_cif
+empleado-nif = empleado_nif
+elemento-validez = elemento_validez
+elemento-validez-cruz = elemento_validez-cruz
+agrupador = agrupador
+epis = epis_desc
+epis-solicitadas = epis_solicitadas
+evento-fecha = fecha_inicio
+evento-hora = hora_inicio
+direccion = direccion
+evento-estado = estado
+documento-obligatoriedad = documento_obligatoriedad
+accidente-baja = baja
+medidas-preventivas = medidas_preventivas
+hora-trabajo = hora_trabajo
+tipo-asistencia = tipo_asistencia
+fecha-baja = fecha_baja
+descripcion = descripcion
+telefono = telefono
+ocupacion = ocupacion
+lesion = lesion
+existe-lesion = existe_lesion
+baja = baja
+representante-legal = representante_legal
+municipio = municipio
+fecha-documento = fecha_documento
+evaluacion-riesgos = evaluacion-riesgos
+fecha-descarga = fecha-descarga
+firma-usuario = firma-usuario
+descripcion-puesto = descripcion_puesto
+fecha-inicio = fecha_inicio
+fecha-fin = fecha_fin
+agrupador-relacion = agrupador-relacion
+elemento-origen = elemento-origen

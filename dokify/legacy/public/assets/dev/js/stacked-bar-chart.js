@@ -1,0 +1,3 @@
+define(["vendor/highcharts/highcharts"],function(){function a(d){var c=$(d).data("serie-src"),b=$(d).data("no-data");Highcharts.setOptions({lang:{decimalPoint:",",thousandsSep:"."}});
+$.getJSON(c,function(e){if(0===e.total_audits){$(b).show();return;}$(d).highcharts({chart:{type:"bar",height:40*(e.categories.length+1)},credits:{enabled:false},legend:{enabled:false},title:{text:false},xAxis:{categories:e.categories},yAxis:{title:{text:false}},plotOptions:{series:{stacking:"normal"}},series:e.series});
+});}a.init=function(){return new a(this);};return a;});

@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<plugin>
+	<nombre>Exportar una tabla en formato XLS</nombre>
+	<descripcion>Permite, una vez seleccionados los registro que queremos exportar, generar un xls que podremos guardar en el pc con la información de la tabla</descripcion>
+	<aplicacion>
+		<id>table2xls@jandres</id>
+		<version>2.0</version>
+		<creador>Jose Ignacio Andres</creador>
+	</aplicacion>
+	<cuerpo>
+		<prioridad>0</prioridad>
+		<modo>tabla</modo><!-- linea, tabla-->
+	</cuerpo>
+</plugin>

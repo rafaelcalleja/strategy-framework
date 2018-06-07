@@ -1,0 +1,3 @@
+define(function(){var c,b;var a={};a.controller=["$scope","Search","Layout",function(d,e,f){f.loading=false;d.query=b;d.employees=c;d.$watch("query",function(){if(b===d.query){return;
+}b=d.query;if(b){c=e.employees({q:b});}else{c=undefined;}d.employees=c;});}];a.templateUrl="/app/mobile/search/show.html";a.resolve={loginData:["Login",function(d){return d.get().$promise;
+}],title:["Layout","$document",function(d,f){var e=document.getElementById("menu-search");if(e){d.setTitle(e.innerHTML);}}]};return a;});

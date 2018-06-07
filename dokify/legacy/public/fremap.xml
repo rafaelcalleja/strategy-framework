@@ -1,0 +1,456 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="https://www.prevencionfremap.net/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="https://www.prevencionfremap.net/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="https://www.prevencionfremap.net/">
+      <s:element name="SWObtenerProvinciasUsuario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUsuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sAplicacion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SWObtenerProvinciasUsuarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SWObtenerProvinciasUsuarioResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="oProvincias" type="tns:ArrayOfDatosProvincia" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfDatosProvincia">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="DatosProvincia" nillable="true" type="tns:DatosProvincia" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="DatosProvincia">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="iCodPrv" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="sNombreProvincia" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SWObtenerLocalidadesProvinciaUsuario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="iCodPrv" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="sUsuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sAplicacion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SWObtenerLocalidadesProvinciaUsuarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SWObtenerLocalidadesProvinciaUsuarioResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="oLocalidades" type="tns:ArrayOfDatosLocalidad" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfDatosLocalidad">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="DatosLocalidad" nillable="true" type="tns:DatosLocalidad" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="DatosLocalidad">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="iCodLoc" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="sNombreLocalidad" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SWObtenerInformeAptitud">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="oDatosReq" type="tns:CReqAptitud" />
+            <s:element minOccurs="0" maxOccurs="1" name="sUsuario" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="CReqAptitud">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="sTipoDocumento" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sNumeroDocumento" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sFechaDesde" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SWObtenerInformeAptitudResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SWObtenerInformeAptitudResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="aBinarioPDFAptitud" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="sFechaAptitud" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sCritAptitud" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SWObtenerInformeAptitudInt">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="oDatosReq" type="tns:CReqAptitud" />
+            <s:element minOccurs="0" maxOccurs="1" name="sUsuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sAplicacion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SWObtenerInformeAptitudIntResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SWObtenerInformeAptitudIntResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="aBinarioPDFAptitud" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="sFechaAptitud" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sCritAptitud" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SWObtenerInformeAptitudPuesto">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="oDatosReq" type="tns:CReqAptitud" />
+            <s:element minOccurs="0" maxOccurs="1" name="sUsuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sAplicacion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SWObtenerInformeAptitudPuestoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SWObtenerInformeAptitudPuestoResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="aDatosAptitud" type="tns:ArrayOfCDatosAptitudPuesto" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfCDatosAptitudPuesto">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CDatosAptitudPuesto" nillable="true" type="tns:CDatosAptitudPuesto" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CDatosAptitudPuesto">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="aBinarioPDFAptitud" type="s:base64Binary" />
+          <s:element minOccurs="0" maxOccurs="1" name="sFechaAptitud" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sFechaReco" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sCritAptitud" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sDescPuesto" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="iResOperacion" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SWValidarCredencialesUsuario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sAplicacion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sUsuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sPwd" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SWValidarCredencialesUsuarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SWValidarCredencialesUsuarioResult" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="iResAut" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SWConsultaDocumentos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="oDatosConsulta" type="tns:CDatosConsulta" />
+            <s:element minOccurs="0" maxOccurs="1" name="sUsuario" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="CDatosConsulta">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="sClaveContrato" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sPrvCentro" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sLocCentro" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sDireccionCentro" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sClaveCentro" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sDocCentro" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sDocContrato" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sRefDocumento" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sDescDocumento" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sFechaDesde" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sFechaHasta" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sBorradores" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sPublicados" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sDescargados" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SWConsultaDocumentosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SWConsultaDocumentosResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="aResultadoConsulta" type="tns:ArrayOfCInfoDocumento" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfCInfoDocumento">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CInfoDocumento" nillable="true" type="tns:CInfoDocumento" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CInfoDocumento">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="sRefDocumento" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sFechaUltMod" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sDescripcion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sNombreCentro" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sDireccionCentro" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sLocalidadCentro" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sClaveCentro" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sTipoDocumento" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SWConsultaDocumentosPFOLE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="oDatosConsulta" type="tns:CDatosConsulta" />
+            <s:element minOccurs="0" maxOccurs="1" name="sUsuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sAplicacion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SWConsultaDocumentosPFOLEResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SWConsultaDocumentosPFOLEResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="aResultadoConsulta" type="tns:ArrayOfCInfoDocumento" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SWObtenerDocumento">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sReferencia" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sUsuario" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SWObtenerDocumentoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SWObtenerDocumentoResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="aBinarioDocumento" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SWObtenerDocumentoPFOLE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sReferencia" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sUsuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sAplicacion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SWObtenerDocumentoPFOLEResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SWObtenerDocumentoPFOLEResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="aBinarioDocumento" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="SWObtenerProvinciasUsuarioSoapIn">
+    <wsdl:part name="parameters" element="tns:SWObtenerProvinciasUsuario" />
+  </wsdl:message>
+  <wsdl:message name="SWObtenerProvinciasUsuarioSoapOut">
+    <wsdl:part name="parameters" element="tns:SWObtenerProvinciasUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="SWObtenerLocalidadesProvinciaUsuarioSoapIn">
+    <wsdl:part name="parameters" element="tns:SWObtenerLocalidadesProvinciaUsuario" />
+  </wsdl:message>
+  <wsdl:message name="SWObtenerLocalidadesProvinciaUsuarioSoapOut">
+    <wsdl:part name="parameters" element="tns:SWObtenerLocalidadesProvinciaUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="SWObtenerInformeAptitudSoapIn">
+    <wsdl:part name="parameters" element="tns:SWObtenerInformeAptitud" />
+  </wsdl:message>
+  <wsdl:message name="SWObtenerInformeAptitudSoapOut">
+    <wsdl:part name="parameters" element="tns:SWObtenerInformeAptitudResponse" />
+  </wsdl:message>
+  <wsdl:message name="SWObtenerInformeAptitudIntSoapIn">
+    <wsdl:part name="parameters" element="tns:SWObtenerInformeAptitudInt" />
+  </wsdl:message>
+  <wsdl:message name="SWObtenerInformeAptitudIntSoapOut">
+    <wsdl:part name="parameters" element="tns:SWObtenerInformeAptitudIntResponse" />
+  </wsdl:message>
+  <wsdl:message name="SWObtenerInformeAptitudPuestoSoapIn">
+    <wsdl:part name="parameters" element="tns:SWObtenerInformeAptitudPuesto" />
+  </wsdl:message>
+  <wsdl:message name="SWObtenerInformeAptitudPuestoSoapOut">
+    <wsdl:part name="parameters" element="tns:SWObtenerInformeAptitudPuestoResponse" />
+  </wsdl:message>
+  <wsdl:message name="SWValidarCredencialesUsuarioSoapIn">
+    <wsdl:part name="parameters" element="tns:SWValidarCredencialesUsuario" />
+  </wsdl:message>
+  <wsdl:message name="SWValidarCredencialesUsuarioSoapOut">
+    <wsdl:part name="parameters" element="tns:SWValidarCredencialesUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="SWConsultaDocumentosSoapIn">
+    <wsdl:part name="parameters" element="tns:SWConsultaDocumentos" />
+  </wsdl:message>
+  <wsdl:message name="SWConsultaDocumentosSoapOut">
+    <wsdl:part name="parameters" element="tns:SWConsultaDocumentosResponse" />
+  </wsdl:message>
+  <wsdl:message name="SWConsultaDocumentosPFOLESoapIn">
+    <wsdl:part name="parameters" element="tns:SWConsultaDocumentosPFOLE" />
+  </wsdl:message>
+  <wsdl:message name="SWConsultaDocumentosPFOLESoapOut">
+    <wsdl:part name="parameters" element="tns:SWConsultaDocumentosPFOLEResponse" />
+  </wsdl:message>
+  <wsdl:message name="SWObtenerDocumentoSoapIn">
+    <wsdl:part name="parameters" element="tns:SWObtenerDocumento" />
+  </wsdl:message>
+  <wsdl:message name="SWObtenerDocumentoSoapOut">
+    <wsdl:part name="parameters" element="tns:SWObtenerDocumentoResponse" />
+  </wsdl:message>
+  <wsdl:message name="SWObtenerDocumentoPFOLESoapIn">
+    <wsdl:part name="parameters" element="tns:SWObtenerDocumentoPFOLE" />
+  </wsdl:message>
+  <wsdl:message name="SWObtenerDocumentoPFOLESoapOut">
+    <wsdl:part name="parameters" element="tns:SWObtenerDocumentoPFOLEResponse" />
+  </wsdl:message>
+  <wsdl:portType name="SWAccesoDocumentosSoap">
+    <wsdl:operation name="SWObtenerProvinciasUsuario">
+      <wsdl:input message="tns:SWObtenerProvinciasUsuarioSoapIn" />
+      <wsdl:output message="tns:SWObtenerProvinciasUsuarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SWObtenerLocalidadesProvinciaUsuario">
+      <wsdl:input message="tns:SWObtenerLocalidadesProvinciaUsuarioSoapIn" />
+      <wsdl:output message="tns:SWObtenerLocalidadesProvinciaUsuarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SWObtenerInformeAptitud">
+      <wsdl:input message="tns:SWObtenerInformeAptitudSoapIn" />
+      <wsdl:output message="tns:SWObtenerInformeAptitudSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SWObtenerInformeAptitudInt">
+      <wsdl:input message="tns:SWObtenerInformeAptitudIntSoapIn" />
+      <wsdl:output message="tns:SWObtenerInformeAptitudIntSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SWObtenerInformeAptitudPuesto">
+      <wsdl:input message="tns:SWObtenerInformeAptitudPuestoSoapIn" />
+      <wsdl:output message="tns:SWObtenerInformeAptitudPuestoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SWValidarCredencialesUsuario">
+      <wsdl:input message="tns:SWValidarCredencialesUsuarioSoapIn" />
+      <wsdl:output message="tns:SWValidarCredencialesUsuarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SWConsultaDocumentos">
+      <wsdl:input message="tns:SWConsultaDocumentosSoapIn" />
+      <wsdl:output message="tns:SWConsultaDocumentosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SWConsultaDocumentosPFOLE">
+      <wsdl:input message="tns:SWConsultaDocumentosPFOLESoapIn" />
+      <wsdl:output message="tns:SWConsultaDocumentosPFOLESoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SWObtenerDocumento">
+      <wsdl:input message="tns:SWObtenerDocumentoSoapIn" />
+      <wsdl:output message="tns:SWObtenerDocumentoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SWObtenerDocumentoPFOLE">
+      <wsdl:input message="tns:SWObtenerDocumentoPFOLESoapIn" />
+      <wsdl:output message="tns:SWObtenerDocumentoPFOLESoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SWAccesoDocumentosSoap" type="tns:SWAccesoDocumentosSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+    <wsdl:operation name="SWObtenerProvinciasUsuario">
+      <soap:operation soapAction="https://www.prevencionfremap.net/SWObtenerProvinciasUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SWObtenerLocalidadesProvinciaUsuario">
+      <soap:operation soapAction="https://www.prevencionfremap.net/SWObtenerLocalidadesProvinciaUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SWObtenerInformeAptitud">
+      <soap:operation soapAction="https://www.prevencionfremap.net/SWObtenerInformeAptitud" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SWObtenerInformeAptitudInt">
+      <soap:operation soapAction="https://www.prevencionfremap.net/SWObtenerInformeAptitudInt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SWObtenerInformeAptitudPuesto">
+      <soap:operation soapAction="https://www.prevencionfremap.net/SWObtenerInformeAptitudPuesto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SWValidarCredencialesUsuario">
+      <soap:operation soapAction="https://www.prevencionfremap.net/SWValidarCredencialesUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SWConsultaDocumentos">
+      <soap:operation soapAction="https://www.prevencionfremap.net/SWConsultaDocumentos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SWConsultaDocumentosPFOLE">
+      <soap:operation soapAction="https://www.prevencionfremap.net/SWConsultaDocumentosPFOLE" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SWObtenerDocumento">
+      <soap:operation soapAction="https://www.prevencionfremap.net/SWObtenerDocumento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SWObtenerDocumentoPFOLE">
+      <soap:operation soapAction="https://www.prevencionfremap.net/SWObtenerDocumentoPFOLE" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SWAccesoDocumentos">
+    <wsdl:port name="SWAccesoDocumentosSoap" binding="tns:SWAccesoDocumentosSoap">
+      <soap:address location="https://www.prevencionfremap.net/WSServiciosDocumentacion/ServiciosDocumentacion.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

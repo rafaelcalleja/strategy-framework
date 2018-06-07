@@ -1,0 +1,15 @@
+define(["controller/search","controller/company","controller/user","controller/maps","controller/help","controller/checkin","controller/employee/checkin","controller/employee/offline","controller/employee","directives","services","angular","ngRoute","ngResource","ngCookies","ngLocalStorage","angulartics","angulartics-ga","angular-timer","offline","jstz",],function(i,e,a,k,d,f,g,h,j){angular.extend(angular,{inCollection:function(m,n){m=isNaN(m)?m.uid:m;
+var l=false;angular.forEach(n,function(o){if(m===o.uid){l=o;return false;}});return l;}});var c=angular.module("doki",["angulartics","angulartics.google.analytics","timer","ngRoute","ngCookies","LocalStorageModule","services","directives"]);
+window.log=function(l){if(window.console!==undefined){console.log(l);}};window.errorLog=function(n,m){var o,l;o=(window.ActiveXObject)?new ActiveXObject("Microsoft.XMLHTTP"):new XMLHttpRequest();
+l="error="+encodeURIComponent(n.stack?n.stack:n);l+="&ua="+encodeURIComponent(navigator.userAgent);l+="&route="+encodeURIComponent(location.hash.substring(1));
+o.open("POST","/mobile/error",true);o.setRequestHeader("Content-type","application/x-www-form-urlencoded");o.send(l);};c.factory("$exceptionHandler",function(){return window.errorLog;
+});c.run(["$cookies","OfflineCache","Login",function(m,q,p){var l,o,n;l=q("app");n="uid";o=l.get(n);if(m.uid===undefined){return;}if(o===undefined){l.put(n,m.uid);
+return;}if(m.uid===o){return;}p.clearCache();l.put(n,m.uid);}]);c.run(["$rootScope","$filter","Layout","Login","Geolocator",function(l,p,n,o,m){var q=p("orderBy");
+l.Layout=n;o.get(function(r){r.profiles=q(r.profiles,"active",true);l.login=r;var s=null;if(r.location){s={latitude:r.location.lat,longitude:r.location.lng};
+}m.getPosition(s).then(function(t){var u={lat:t.latitude,lng:t.longitude};o.update({location:u});},function(t){n.geoError=t.code;throw new Error("[NOTICE] location error "+t.code+" ["+t.message+"]");
+});});l.$on("$routeChangeSuccess",function(){document.documentElement.scrollTop=0;document.body.scrollTop=0;n.inNav=false;});l.$on("$routeChangeStart",function(){n.loading=true;
+});l.$on("$routeChangeError",function(){n.error=true;});}]);function b(m,n,o,l){o.interceptors.push(["$q",function(p){return{responseError:function(q){if(401===q.status){window.location="/login?goto="+encodeURIComponent("/app/"+location.hash);
+return;}return p.reject(q);}};}]);l.setPrefix("dk");n.withAutoBase(true);m.when("/search",i).when("/company/:company",e).when("/user/:user",a).when("/maps",k).when("/help",d).when("/checkin/:checkin",f).when("/employee/:employee/checkin",g).when("/employee/:employee/offline/:profile?",h).when("/employee/:employee",j).otherwise({resolve:{loginData:["Login",function(p){return p.get().$promise;
+}]},template:"",controller:["loginData","$location",function(p,q){if(p.is_security){q.path("/user/"+p.uid);}else{q.path("/company/"+p.company.uid);}q.replace();
+}]});}b.$inject=["$routeProvider","$analyticsProvider","$httpProvider","localStorageServiceProvider"];c.config(b);Offline.state="down";Offline.options={requests:false};
+Offline.check();angular.bootstrap(document,["doki"]);return c;});

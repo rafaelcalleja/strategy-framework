@@ -1,0 +1,26 @@
+/* humanstxt.org */
+
+/* TEAM */
+	Development Lead: Jose Ignacio Andres
+	Contact: jandres [at] dokify.net
+	Twitter: @joserobleda
+	From: Salamanca, Spain
+
+	Frontend + Backend Developer: Fernando Gomez
+	Contact: fgomez [at] dokify.net
+	Twitter: @archenemy
+	From: Valladolid, Spain
+
+	Frontend + Backend Developer: Pablo del Moral
+	Contact: pdelmoral [at] dokify.net
+	Twitter: @pdelmoral
+	From: Burgos, Spain
+
+	Frontend + Backend Developer: Javier Anaya Martínez
+	Contact: janaya [at] dokify.net
+	Twitter: @ja_anaya
+	From: Madrid, Spain
+/* SITE */
+	Standards: HTML5, CSS3
+	Components: jQuery, Google Web Fonts API
+	Software: Sublime Text 2, Ubuntu

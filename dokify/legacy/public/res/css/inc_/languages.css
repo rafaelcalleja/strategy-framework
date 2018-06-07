@@ -1,0 +1,30 @@
+#idiomas{ float:left;height:14px;padding-top:8px; }
+	#idiomas ol{ margin:0; border:0; padding:0; list-style:none; margin-left:10px;	}
+	#idiomas ol li{ float:left;}
+	#idiomas li a:link, #idiomas li a:visited{ height:14px; display: block; text-decoration: none; width:21px; }
+
+/*MENU IDIOMAS - "castellano"*/
+li.navCastellano{text-indent: -5000px; width:21px; margin-right:6px;}
+li.navCastellano a.on, li.navCastellano a.on:visited {background: url(<?=RESOURCES_DOMAIN?>/img/lang/castellano.gif) no-repeat 0 -14px; cursor: default;}
+li.navCastellano a.off { background: url(<?=RESOURCES_DOMAIN?>/img/lang/castellano.gif) no-repeat 0 0;}
+li.navCastellano a.off:hover { background: url(<?=RESOURCES_DOMAIN?>/img/lang/castellano.gif) no-repeat 0 -14px;}
+
+/*MENU IDIOMAS - "portugues"*/
+li.navPortugues{text-indent: -5000px; width:21px; margin-right:6px;}
+li.navPortugues a.on, li.navPortugues a.on:visited {background: url(<?=RESOURCES_DOMAIN?>/img/lang/portugues.gif) no-repeat 0 -14px; cursor: default;}
+li.navPortugues a.off { background: url(<?=RESOURCES_DOMAIN?>/img/lang/portugues.gif) no-repeat 0 0;}
+li.navPortugues a.off:hover { background: url(<?=RESOURCES_DOMAIN?>/img/lang/portugues.gif) no-repeat 0 -14px;}
+
+
+/*MENU IDIOMAS - "ingles"*/
+li.navIngles{text-indent: -5000px; width:21px;margin-right:6px;}
+li.navIngles a.on, li.navIngles a.on:visited {background: url(<?=RESOURCES_DOMAIN?>/img/lang/ingles.gif) no-repeat 0 -14px; cursor: default;}
+li.navIngles a.off { background: url(<?=RESOURCES_DOMAIN?>/img/lang/ingles.gif) no-repeat 0 0;}
+li.navIngles a.off:hover { background: url(<?=RESOURCES_DOMAIN?>/img/lang/ingles.gif) no-repeat 0 -14px;}
+
+
+/*MENU IDIOMAS - "frances"*/
+li.navFrances {text-indent: -5000px; width:21px; margin-right:6px;}
+li.navFrances a.on, li.navIngles a.on:visited {background: url(<?=RESOURCES_DOMAIN?>/img/lang/france.gif) no-repeat 0 -14px; cursor: default;}
+li.navFrances a.off { background: url(<?=RESOURCES_DOMAIN?>/img/lang/france.gif) no-repeat 0 0;}
+li.navFrances a.off:hover { background: url(<?=RESOURCES_DOMAIN?>/img/lang/france.gif) no-repeat 0 -14px;}

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 18.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="6 6 20 20" enable-background="new 6 6 20 20" xml:space="preserve">
+<path fill="#FFB600" d="M16,7c-5,0-9,4-9,9s4,9,9,9s9-4,9-9S21,7,16,7 M16,9.2c3.7,0,6.8,3,6.8,6.8s-3,6.8-6.8,6.8s-6.8-3-6.8-6.8
+	S12.3,9.2,16,9.2"/>
+<path fill="#FFFFFF" d="M16,7c5.3-0.1,9,3.7,9,9h-2.2c-0.2-3.7-3.1-6.4-6.8-6.8V7z">
+<animateTransform  type="rotate" fill="remove" to="360 16 16" from="0 16 16" attributeName="transform" additive="replace" restart="always" repeatCount="indefinite" accumulate="none" calcMode="linear" dur="0.8s">
+		</animateTransform>
+</path>
+</svg>

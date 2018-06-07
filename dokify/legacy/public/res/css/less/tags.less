@@ -1,0 +1,56 @@
+html { overflow-y:scroll; }
+body{
+	font-family:		"Lucida Grande",Verdana,Arial,"Bitstream Vera Sans",sans-serif;
+	font-size:			11px;
+	font-size-adjust:	none;
+	font-style:			normal;
+	font-variant:		normal;
+	font-weight:		normal;
+	line-height:		normal;
+}
+input{
+	vertical-align:	middle;
+}
+
+a, a:visited, .link, .highlight-target{
+	cursor:	pointer;
+	color:	#3F68B6;
+	text-decoration:underline;
+}
+a:hover, .link:hover{
+	color:	#00388C;
+}
+
+input[type="text"], input[type="password"], input[type="date"], textarea{
+	border:				1px solid #E5E5E5;
+	padding:			1px;
+}
+
+input[type="text"]:focus, input[type="password"]:focus, textarea:focus{
+	border-color:		#6d6d6d !important;
+}
+
+input[type=submit],label,select,.pointer    { cursor:pointer; }
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	#cBoxContent textarea{
+		max-width:		99%;
+	}
+}
+
+ul{
+	list-style: 		none;
+}
+fieldset{
+	border:				1px solid #888;
+	padding:			0px 0px 5px;
+}
+fieldset legend{
+	margin:				0 30px;
+	padding:			2px 8px;
+}
+
+/*
+a[href$='.pdf'] { padding:0 20px 0 0; background:transparent url(/graphics/icons/pdf.gif) no-repeat center right; }
+*/
+

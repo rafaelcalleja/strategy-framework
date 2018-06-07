@@ -1,0 +1,16 @@
+header .mobile-four{padding-left:70px}
+header li { margin-left: 36px !important; }
+
+.white-overlay{filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#ddffffff', endColorstr='#ddffffff')}
+#counter .number div{background-color:#fff}
+.button.postfix, .circle.xxs { behavior: none; }
+.prefix, .postfix { height: 30px; }
+.quote {vertical-align: middle; margin-bottom: 5px; }
+/*button.xl, .button.xl { behavior: url(/res/css/PIE-1.0.0/PIE.htc); }*/
+a.close-reveal-modal { top: 20px; right: 40px; position: absolute; }
+#start button { padding: 10px 18px; }
+.share-button .count i, .share-button .count u { display: none; }
+.share-button .count i, .share-button .count u { display: none; }
+.share-button i { margin: -1px 3px 0 0;}
+.share-button { margin-right: 1em;}
+.share-button button { padding-left: 0 !important; padding-right: 0  !important; }

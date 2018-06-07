@@ -1,0 +1,10 @@
+define(function(){var f=$(document.createElement("div"));f.attr("id","tips").css({position:"absolute",display:"none",visibility:"hidden"}).appendTo("body");
+function c(){f.hide();}function a(r,h,l){var t,p,o,j,m,i,s,g,n,k,q;f.html(h).css("visibility","visible");q=$(l).data("title-align")||"vertical";m=$(l).offset();
+t=$(l).outerWidth();p=$(l).outerHeight();o=f.outerWidth();j=f.outerHeight();g=$(document).scrollTop();n=m.top-g==0&&m.left==0;k=10;if($(l).is("area")){t+=20;
+p+=30;}if(n){m={top:r.pageY,left:r.pageX};}if(q=="vertical"){q=(m.top>(g+$(window).height()/2))?"top":"bottom";}else{if(q=="horizontal"){q=(m.left>($(document).scrollLeft()+$(window).width()/2))?"left":"right";
+}}if(q=="top"||q=="bottom"){i=m.left-(o/2-t/2);s=m.top;if(q=="bottom"){s+=p;if(n){s+=k;}}else{s-=j;if(n){s-=k;}}}else{if(q=="right"||q=="left"){s=m.top+Math.round(p/2)-Math.round(j/2);
+if(q=="right"){i=m.left+t;if(n){i+=k;}}else{i=m.left-o;if(n){i-=k;}}}}f.css({top:s,left:i}).attr("class",q).show();}function d(i){var k,j;k=this;j=$(this).attr("title")||$(this).data("title");
+$(this).removeAttr("title");$(this).data("title",j);function g(){c();}function h(l){if($(this).hasClass("no-tip")){return;}a(l,$(k).data("title"),this);
+}$(this).on("mouseenter",h);$(this).on("mouseleave",g);$(this).on("click",g);if(i){h.call(this,i);}}function e(g){if($(this).attr("title")||$(this).data("title")){d.call(this,g);
+}return true;}function b(h,g){$(g).find("[title]").each(function(){d.call(this);});}if(window.ie&&window.ie<10){$(document).on("redraw",b);b(null,document.body);
+}else{$(document).on("mouseenter","*",e);}$(document).on("navigate",c);});

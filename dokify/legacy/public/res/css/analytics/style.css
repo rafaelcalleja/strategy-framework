@@ -1,0 +1,62 @@
+#analytics-iface {
+	margin: 0 0 0 10px;
+	font-family: arial,sans-serif;
+}
+	#analytics-menu {
+		width: 160px;
+		border-right: 1px solid #A4A4A4;
+		padding-top: 0.5em;
+	}
+
+	#analytics-menu li {
+		margin-bottom: 0.5em;
+	}
+		#analytics-menu li.separator {
+			margin-top: 30px;
+		}
+
+		#analytics-menu li a {
+			font-size:13px;
+			border-left:3px solid orange;
+			display:block;
+			padding:3px 0 3px 10px;
+		}
+
+		#analytics-menu li a:hover {
+			background-color: #F1F1F1;
+		}
+
+	#analytics-menu li.seleccionado { font-weight: bold; background-color: #eee; }
+
+		#analytics-data {
+			padding-top: 0;
+			vertical-align: top;
+		}
+
+		#analytics-data #left-panel, #analytics-data #left-panel-container {
+			width: 0px;
+		}
+		#analytics-data #table-container { 
+			border: 0px;
+		}
+		#analytics-data #data-menu-top {
+			border-radius: 0 0 0 0;
+		}
+		#analytics-data #data-menu-bottom {
+			border-radius: 0 0 0 0; border-width: 1px 0;
+			line-height: 30px;
+		}
+		#analytics-data #main-table { margin:0px; }
+		#analytics-data .data { margin: 0px; }
+
+		#analytics-data .line-options, #analytics-data .bottom-line-options {
+			padding:6px 0 0 3px;
+		}
+		#analytics-data .line-data tr td {
+			line-height: 34px;
+		}
+		#analytics-data .line-options {
+			height: 14px;
+		}
+		#analytics-data #main-table { table-layout: fixed; }
+

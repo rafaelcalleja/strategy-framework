@@ -1,0 +1,1 @@
+define([],function(){function a(b){b.focus();}a.init=function(){return new a(this);};return a;});

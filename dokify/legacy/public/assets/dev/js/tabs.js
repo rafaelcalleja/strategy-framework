@@ -1,0 +1,2 @@
+define(function(){function a(d){var c;d.preventDefault();$(this).parent().find(".current").removeClass("current");$(this).addClass("current");c=$(this).attr("target");
+$(c).parent().children().hide();$(c).show();}function b(){$(this).on("click",".tab-item",a);}return{init:b};});

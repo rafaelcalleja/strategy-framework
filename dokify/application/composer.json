@@ -1,0 +1,20 @@
+{
+    "name": "dokify/common-domain",
+    "description": "domain & core domain",
+    "type": "project",
+    "authors": [
+        {
+            "name": "rafaelcalleja",
+            "email": "rcalleja@dokify.net"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "psr/container": "^1.0@dev"
+    },
+    "autoload": {
+        "psr-4": {
+            "Dokify\\": "src/"
+        }
+    }
+}

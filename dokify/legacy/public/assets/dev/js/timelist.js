@@ -1,0 +1,2 @@
+define(function(){function a(c){var b=this;$(c).find(".accordion").on("click",function(d){d.preventDefault();b.toggleCollapse(this);});}a.prototype.toggleCollapse=function(b){$(b).parent().nextUntil(".timeline-break").toggle();
+};a.init=function(){return new a(this);};return a;});

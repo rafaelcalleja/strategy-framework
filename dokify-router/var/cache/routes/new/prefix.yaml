@@ -1,5 +1,0 @@
-prefix_test:
-    path: /prefix/test
-    defaults: { _controller: \Dokify\Controller\Settings\Profile::show, _before: ['login:noChecks'] }
-    methods: [GET]
-    schemes:  [https]

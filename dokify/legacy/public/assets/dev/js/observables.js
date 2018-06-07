@@ -1,0 +1,2 @@
+define(["jquery"],function(a){var b={};function c(){}c.watchObject=function(e,d,f){if(typeof f!=="function"){f=function(i,h,j){};}var g=function(j,h,i){f(j,h,i);
+a(document).trigger(e+".change",d);};b.watch(e,g);b[e]=d;};return c;});

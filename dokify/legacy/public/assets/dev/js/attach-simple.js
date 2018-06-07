@@ -1,0 +1,12 @@
+define(function(){function a(c){var b=this,d=$(c).data("show-express-message");b.checkAnyRequestIsSelected();$("#attach-finish").on("click",function(f){f.preventDefault();
+if(b.checkStepsCompleted()){$(this).submit();}return false;});$("#file").change(function(){$("#step-upload").addClass("step-success");b.checkSubmitButtonEnabled();
+});$("#date").change(function(){if(this.value===""){$("#step-date").removeClass("step-success");}else{$("#step-date").addClass("step-success");}b.checkSubmitButtonEnabled();
+});$(".request-checkbox").on("click",function(){b.checkAnyRequestIsSelected();b.checkSubmitButtonEnabled();});if(d){$(".request-checkbox").on("change",function(h){var g=$(c).data("express-message"),f=$(this).data("client"),e=0;
+$(c).find(".request-checkbox:checked").each(function(){if(f!==$(this).data("client")){e++;}});if(0<e){$(this).removeAttr("checked");h.preventDefault();
+h.stopPropagation();alert(g);return false;}});}$(".no-need-groups").on("change",function(){var e=$(this).data("groups-select"),f=$(this).data("comment");
+$(e).prop("disabled",this.checked);$(f).toggle();$(f).focus();});$(".not-expiring").click(function(){var f=$(this).data("target").find(),e=$(this).data("express-message");
+if(this.checked){$(f).before($("<input>").attr({id:"hidden-"+this.id,type:"hidden",name:$(f).attr("name"),value:e}));f.val(e);f.prop("disabled",true);}else{$("#hidden-"+this.id).remove();
+f.val("");f.prop("disabled",false);}});}a.prototype.checkAnyRequestIsSelected=function(){var b=0;$(".request-checkbox").each(function(){if(true===this.checked){b++;
+}});if(b===0){$("#step-requests").removeClass("step-success");}else{$("#step-requests").addClass("step-success");}};a.prototype.checkStepsCompleted=function(){var d=$("#step-upload").hasClass("step-success"),b=$("#step-date").hasClass("step-success"),c=$("#step-requests").hasClass("step-success");
+return d&&b&&c;};a.prototype.checkSubmitButtonEnabled=function(){if(this.checkStepsCompleted()){$("#attach-finish").removeClass("disabled");}else{$("#attach-finish").addClass("disabled");
+}};a.init=function(){return new a(this);};return a;});

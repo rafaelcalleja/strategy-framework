@@ -1,0 +1,15 @@
+CACHE MANIFEST
+FALLBACK:
+# v1
+# This is a comment.
+http://jandres-desktop/index.php
+http://jandres-desktop/login.php
+http://jandres-desktop/agd/index.php
+http://jandres-desktop/salir.php
+http://jandres-desktop/css/reset.css
+http://jandres-desktop/css/tags.css
+http://jandres-desktop/css/class.css
+http://jandres-desktop/css/login/estilo.css
+http://jandres-desktop/css/botones.css
+
+

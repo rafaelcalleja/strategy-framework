@@ -1,0 +1,76 @@
+/*
+Error: Undefined variable: "$xsmall".
+        on line 7 of /Users/jose/Github/dokify/src/sass/mobile/_lists.sass
+
+2: 	padding: 10px 0
+3: 	border-top: 1px solid #E9E9E9
+4: 	height: 46px
+5: 	white-space: nowrap
+6: 
+7: 	@media #{$xsmall}
+8: 		padding: 15px 10px
+9: 		height: 46px
+10: 
+11: 	&:first-child
+12: 		border-top: 0px
+
+Backtrace:
+/Users/jose/Github/dokify/src/sass/mobile/_lists.sass:7
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/script/tree/variable.rb:49:in `_perform'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/script/tree/node.rb:50:in `perform'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/script/tree/interpolation.rb:100:in `_perform'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/script/tree/node.rb:50:in `perform'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:526:in `block in run_interp_no_strip'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:524:in `map'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:524:in `run_interp_no_strip'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:531:in `run_interp'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:499:in `visit_media'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/stack.rb:79:in `block in with_base'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/stack.rb:115:in `with_frame'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/stack.rb:79:in `with_base'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:420:in `block (2 levels) in visit_rule'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:420:in `map'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:420:in `block in visit_rule'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:418:in `visit_rule'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/stack.rb:79:in `block in with_base'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/stack.rb:115:in `with_frame'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/stack.rb:79:in `with_base'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/tree/visitors/base.rb:52:in `map'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:157:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:8:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/tree/root_node.rb:36:in `css_tree'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/engine.rb:368:in `_render_with_sourcemap'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/engine.rb:285:in `render_with_sourcemap'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/plugin/compiler.rb:489:in `update_stylesheet'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/plugin/compiler.rb:209:in `each'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/plugin.rb:82:in `update_stylesheets'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/exec/sass_scss.rb:350:in `watch_or_update'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/exec/sass_scss.rb:50:in `process_result'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/exec/base.rb:52:in `parse'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/lib/sass/exec/base.rb:19:in `parse!'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.5/bin/sass:13:in `<top (required)>'
+/usr/bin/sass:23:in `load'
+/usr/bin/sass:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Undefined variable: \"$xsmall\".\A         on line 7 of /Users/jose/Github/dokify/src/sass/mobile/_lists.sass\A \A 2: 	padding: 10px 0\A 3: 	border-top: 1px solid #E9E9E9\A 4: 	height: 46px\A 5: 	white-space: nowrap\A 6: \A 7: 	@media #{$xsmall}\A 8: 		padding: 15px 10px\A 9: 		height: 46px\A 10: \A 11: 	&:first-child\A 12: 		border-top: 0px"; }

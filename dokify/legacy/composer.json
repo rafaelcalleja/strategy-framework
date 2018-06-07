@@ -1,0 +1,24 @@
+{
+  "name": "dokify/legacy-application",
+  "description": "legacy application",
+  "type": "project",
+  "authors": [
+    {
+      "name": "rafaelcalleja",
+      "email": "rcalleja@dokify.net"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "psr/container": "^1.0@dev"
+  },
+  "psr-4": {
+    "Dokify\\Legacy\\": "src/"
+  },
+  "autoload": {
+    "classmap": [
+      "src/class",
+      "public"
+    ]
+  }
+}

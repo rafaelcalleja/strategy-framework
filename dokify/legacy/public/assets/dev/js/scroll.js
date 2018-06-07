@@ -1,0 +1,4 @@
+define(function(){function a(d){var b,c;b=this;this.dom=$(d);this.dom.on("scroll",function(f){b.onScroll(f);});if(c=this.dom.data("scroll-enable")){this.enable=c.find();
+}this.onScroll();}a.prototype.onCompleted=function(b){if(this.enable&&this.enable.is(":disabled")){this.enable.removeAttr("disabled");}};a.prototype.onScroll=function(c){var b=this.getMax()-this.getGap();
+if(this.getCurrent()>=b){this.onCompleted(c);}};a.prototype.getGap=function(){return Math.round(this.getMax()*0.05);};a.prototype.getMax=function(){return this.dom.prop("scrollHeight")-this.dom.outerHeight();
+};a.prototype.getCurrent=function(){return this.dom.scrollTop();};a.init=function(){return new a(this);};return a;});

@@ -1,6 +1,6 @@
 {
-    "name": "dokify/common-domain",
-    "description": "domain & core domain",
+    "name": "dokify/common",
+    "description": "Shared Kernel",
     "type": "project",
     "authors": [
         {
@@ -14,7 +14,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Dokify\\": "src/"
+            "Dokify\\Common\\": "src/"
         }
     }
 }

@@ -1,0 +1,75 @@
+/*
+Syntax error: Invalid CSS after "this,": expected expression (e.g. 1px, bold), was ""
+        on line 38 of /home/jandres/www/dokify/src/js/tour.js
+
+33: 	Tour.prototype.setHTML = function (html) {
+34: 		var dom = $(html);
+35: 
+36: 		// jquery tourbus object
+37: 		this.tourbus = dom.tourbus({
+38: 			tour: this,
+39: 			onStop: this.onStop,
+40: 			onDestroy: this.onDestroy,
+41: 			onLegStart: this.onLegStart,
+42: 			onLegEnd: this.onLegEnd
+43: 		});
+
+Backtrace:
+/home/jandres/www/dokify/src/js/tour.js:38
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/scss/parser.rb:1148:in `expected'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/script/lexer.rb:199:in `expected!'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/script/parser.rb:471:in `assert_expr'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/script/parser.rb:253:in `expr'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/script/parser.rb:470:in `send'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/script/parser.rb:470:in `assert_expr'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/script/parser.rb:49:in `parse'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/script/parser.rb:166:in `parse'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/script.rb:31:in `parse'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/engine.rb:881:in `parse_script'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/engine.rb:608:in `parse_property'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/engine.rb:597:in `parse_property_or_rule'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/engine.rb:578:in `parse_line'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/engine.rb:471:in `build_tree'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/engine.rb:490:in `append_children'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/engine.rb:489:in `each'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/engine.rb:489:in `append_children'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/engine.rb:480:in `build_tree'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/engine.rb:473:in `each'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/engine.rb:473:in `build_tree'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/engine.rb:490:in `append_children'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/engine.rb:489:in `each'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/engine.rb:489:in `append_children'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/engine.rb:480:in `build_tree'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/engine.rb:473:in `each'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/engine.rb:473:in `build_tree'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/engine.rb:490:in `append_children'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/engine.rb:489:in `each'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/engine.rb:489:in `append_children'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/engine.rb:480:in `build_tree'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/engine.rb:473:in `each'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/engine.rb:473:in `build_tree'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/engine.rb:490:in `append_children'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/engine.rb:489:in `each'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/engine.rb:489:in `append_children'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/engine.rb:345:in `_to_tree'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/engine.rb:315:in `_render'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/engine.rb:262:in `render'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/plugin/compiler.rb:362:in `update_stylesheet'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/plugin/compiler.rb:203:in `update_stylesheets'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/plugin/compiler.rb:201:in `each'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/plugin/compiler.rb:201:in `update_stylesheets'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/plugin/compiler.rb:235:in `watch'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/plugin.rb:107:in `send'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/plugin.rb:107:in `method_missing'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/exec.rb:452:in `watch_or_update'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/exec.rb:315:in `process_result'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/exec.rb:41:in `parse'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/exec.rb:21:in `parse!'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/sass:9
+/usr/local/bin/sass:23:in `load'
+/usr/local/bin/sass:23
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Syntax error: Invalid CSS after \"this,\": expected expression (e.g. 1px, bold), was \"\"\A         on line 38 of /home/jandres/www/dokify/src/js/tour.js\A \A 33: 	Tour.prototype.setHTML = function (html) {\A 34: 		var dom = $(html);\A 35: \A 36: 		// jquery tourbus object\A 37: 		this.tourbus = dom.tourbus({\A 38: 			tour: this,\A 39: 			onStop: this.onStop,\A 40: 			onDestroy: this.onDestroy,\A 41: 			onLegStart: this.onLegStart,\A 42: 			onLegEnd: this.onLegEnd\A 43: 		});"; }

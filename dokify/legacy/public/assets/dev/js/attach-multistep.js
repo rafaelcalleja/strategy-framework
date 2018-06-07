@@ -1,0 +1,6 @@
+define(function(){function a(b){$("#file").on("complete",function(e,d,f){if("completed"===d.status){$(b).submit();}});var c=$(b).data("show-express-message");
+if(c){$(".request-checkbox").on("change",function(g){var f=$(b).data("express-message"),e=$(this).data("client"),d=0;$(b).find(".request-checkbox:checked").each(function(){if(e!==$(this).data("client")){d++;
+}});if(0<d){$(this).removeAttr("checked");g.preventDefault();g.stopPropagation();alert(f);return false;}});}$(".no-need-groups").on("change",function(){var d=$(this).data("groups-select"),e=$(this).data("comment");
+$(d).prop("disabled",this.checked);$(e).toggle();$(e).focus();});$(".not-expiring").click(function(){var e=$(this).data("target").find(),d=$(this).data("express-message");
+if(this.checked){$(e).before($("<input>").attr({id:"hidden-"+this.id,type:"hidden",name:$(e).attr("name"),value:d}));e.val(d);e.prop("disabled",true);}else{$("#hidden-"+this.id).remove();
+e.val("");e.prop("disabled",false);}});}a.init=function(){return new a(this);};return a;});

@@ -1,0 +1,5 @@
+body,#all-options-div,#all-options-wrap{overflow:visible;}
+#head,#credits,#all-options-div button,#left-panel{display:none;}
+#left-panel{width:0px;}
+#all-options-wrap{width:100%;height:100%;}
+fieldset{border:0px;}

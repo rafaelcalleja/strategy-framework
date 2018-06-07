@@ -20,10 +20,13 @@ settings-profile-control:
     #httpsPort: '%symfony_port%'
 
 redirect-outside:
-    prefix: '/symfony'
+    #prefix: '/symfony'
     path: /redirect/outside
-    defaults: { _controller: Legacy::show, _before: ['login:noChecks'] }
+    defaults:
+      _controller: Legacy::show
+      _before: ['login:noChecks']
+      _httpsPort: 8443
     methods: [GET]
     schemes:  [https]
-    host: 'redirect.example.com'
+    #host: 'redirect.example.com'
 

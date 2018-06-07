@@ -1,0 +1,5 @@
+define(function(c,a,d){function b(g){var e=this,f;this.interval=null;this.dom=$(g);this.bg=this.dom.children();this.hide=this.dom.data("hide")==true;this.remove=this.dom.data("remove");
+this.progress=this.bg.children();if(f=this.dom.data("src")){this.src=$(f);this.src.on("progress",function(i,h){e.setValue(h);});}}b.prototype.unknow=function(){var e=this,f=0;
+this.progress.width("0%");this.interval=setInterval(function(){e.bg.add(e.progress).css("background-position",f+"px 0");f++;},80);};b.prototype.setValue=function(e){if(this.remove){$(this.remove).hide();
+}this.dom.show();if(isNaN(e)){return this.unknow();}if(this.interval){clearInterval(this.interval);this.bg.add(this.progress).css("background-position","0 0");
+}this.progress.width(e+"%");if(e==100){if(this.hide){this.dom.hide();}}};b.init=function(){var e=new b(this);};return b;});

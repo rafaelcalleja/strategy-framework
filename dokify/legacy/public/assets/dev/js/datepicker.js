@@ -1,0 +1,13 @@
+define(["dokify","vendor/ion.calendar"],function(b){function a(h,l){var e,f,d,m,g,j;d=$(h).data("src");g={lang:l,sundayFirst:false,onReady:function(o){$(h).trigger("change");
+}};$(h).on("change",function(){var p=$(this).val(),r=$(h).data("format"),o=$(h).data("autovalidate"),q=$(h).data("autovalidate-message");if(true===o&&false===n(p,r)){alert(q);
+$(this).val("");}});function n(o,p){if(""===o){return true;}if(p){return moment(o,p).isValid();}return moment(o).isValid();}function k(r){var o,q,p,t,u,s;
+o=r.length;if(o===0){$(h).html(f);return;}for(q=0;q<o;q++){s=r[q];p=moment.unix(s.date).date();t=$(f).find(".day_"+p);u=$(document.createElement("span")).addClass("mark "+s.className);
+t.append(u);}$(h).html(f);}function c(){var o;$(document).one("navigate:before",function(){if(o&&o.abort()){o.abort();}});o=$.getJSON(d,k);}function i(r){var v=new Date("2011-06-02T09:34:29+02:00");
+if(!v||+v!==1307000069000){var q,w,u=/^(\d{4}\-\d\d\-\d\d([tT ][\d:\.]*)?)([zZ]|([+\-])(\d\d):(\d\d))?$/,t=u.exec(r)||[];if(t[1]){q=t[1].split(/\D/);for(var s=0,o=q.length;
+s<o;s++){q[s]=parseInt(q[s],10)||0;}q[1]-=1;q=new Date(Date.UTC.apply(Date,q));if(!q.getDate()){return NaN;}if(t[5]){w=(parseInt(t[5],10)*60);if(t[6]){w+=parseInt(t[6],10);
+}if(t[4]=="+"){w*=-1;}if(w){q.setUTCMinutes(q.getUTCMinutes()+w);}}return q;}return NaN;}else{return new Date(r);}}if(e=$(h).data("href")){g.onClick=function(q){var o=e,p,r;
+r=$(this).find("span");q=i(q);if(r.length===0){return false;}o=o.replace("%d",q.getDate());o=o.replace("%m",q.getMonth()+1);o=o.replace("%Y",q.getFullYear());
+$(document).trigger("location",[o]);return false;};}if($(h).data("type")=="picker"){$(h).ionDatePicker(g);if($(h).attr("autofocus")){$(h).focus();}m=$(h).next();
+if(m.length&&m.prop("tagName").toLowerCase()==="i"){$(m).click(function(){$(h).focus();});}}else{if(d){f=document.createElement("div");$(f).ionCalendar(g);
+c();}else{$(h).ionCalendar(g);}}}a.init=function(){var c=this;b.getLoginData(function(d){moment.lang(d.locale,d.trans);new a(c,d.locale);});};return a;
+});

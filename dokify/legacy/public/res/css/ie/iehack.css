@@ -1,0 +1,52 @@
+#table-container {
+	overflow-x: auto;
+}
+
+.relation-options img, .relation-options span { float: left; }
+.relation-options{ left: -15px;  }
+
+/*#informacion-navegacion{*margin:-38px 0 0 5px;}*/
+.line-options .btn, .line-options select{margin:0px 4px;}
+
+#left-panel-title{padding-left:	2px;}
+#head-buttons { margin-left: 5px;}
+#main-menu a{ border:0px;}
+#buscador button { padding:7px 0px; }
+
+/** IE 7 CONDICIONAL **/
+*:first-child+html #top-bar span { vertical-align:top; }
+*:first-child+html #top-bar span a { line-height: 16px; margin-bottom:-16px; }
+*:first-child+html #top-bar span span { padding:0px; }
+*:first-child+html #main-menu ul li{ margin-left: 0px; }
+#buscador button img { margin-bottom: 0px; }
+
+	
+	.asistente {width:570px;}
+		
+
+	.form-colum-description{width:20%;}
+	.form-colum-separator{width:1%;}
+	.form-colum-value{width:70%;}
+	.form-colum-value input{width:90%;}
+
+	.cbox-close-title{vertical-align:middle;float:none;}
+	#menu-ayuda-buscar .cbox-close-title{ *float:right; }
+
+
+.carpeta td.option-colum{text-align:right !important;}
+.carpeta  .checkbox-colum {width:60px !important;}
+.credits { z-index: 90; }
+
+.multiple + .multiple { margin-left: 0px;}
+.floatinfo .cbox-content, .floatinfo .item-list{ width:450px;}
+/*.filecontainer input{display:inline;position:relative;opacity:0;}
+.filecontainer{visibility:visible;position:static;overflow:visible;}*/
+.asistente select, .ficha select, .agd-form textarea {
+	width:		92%;
+}
+
+
+#home-shortcuts { margin-left: -1px; }
+
+
+.line-data tr td { overflow:hidden!important; }

@@ -1,0 +1,2 @@
+define(function(){function a(d){var c;d.preventDefault();$(this).closest(".tabmenu").find(".tabmenu-current").removeClass("tabmenu-current");$(this).addClass("tabmenu-current");
+c=$(this).attr("target");$(c).parent().children().hide();$(c).show();}function b(){$(this).on("click",".tabmenu-link",a);}return{init:b};});

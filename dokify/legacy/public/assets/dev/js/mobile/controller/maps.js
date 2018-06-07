@@ -1,0 +1,6 @@
+define(function(){var a={};a.controller=function(i,e,b,j,h){var g=e.find("googlemap")[0];var d=new b.Map(g,{mapTypeId:b.MapTypeId.ROADMAP,mapTypeControlOptions:{mapTypeIds:[b.MapTypeId.ROADMAP]},streetViewControl:false});
+b.event.addListenerOnce(d,"idle",function(){i.$apply(function(){h.loading=false;});});var c=new b.LatLngBounds();var f=[];angular.forEach(j.data.markers,function(m){var l=new b.LatLng(m.address[0],m.address[1]);
+var k=new b.Marker({map:d,title:m.title,position:l,optimized:false});f.push(k);c.extend(k.position);});d.fitBounds(c);if(d.getZoom()>12){d.setZoom(12);
+}if(f.length===0){d.setZoom(2);}};a.controller.$inject=["$scope","$document","Maps","GeoPoints","Layout"];a.resolve={loginData:["Login",function(b){return b.get().$promise;
+}],Maps:["MapService",function(b){return b.$promise;}],GeoPoints:["$http","Login","Layout",function(d,c,b){return c.get().$promise.then(function(e){b.setTitle("Maps");
+return d.get("/app/company/"+e.company.uid+"/maps?action=data");});}]};a.templateUrl="/app/mobile/maps/show.html";return a;});

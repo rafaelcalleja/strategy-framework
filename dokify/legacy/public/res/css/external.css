@@ -1,0 +1,16 @@
+*,*:before,*:after{-moz-box-sizing:border-box;box-sizing:border-box;}
+p{font-size:14px;}
+html,body,ul{margin:0px;font-size:12px;font-family:arial;}
+input{font-size:22px;padding:6px;width:100%;}
+input.error{border:2px solid red;-webkit-border-radius:6px;-moz-border-radius:6px;border-radius:6px;}
+table{width:100%;}
+table.form{font-size:22px;}
+table .hidden{display:none;}
+button{box-shadow:0 1px 0 rgba(255, 255, 255, 0.5) inset;font-size:14px;display:inline-block;padding:7px 17px 8px;color:#FFF;border-radius:3px;cursor:pointer;}
+button.finish{background-color:#5DA423;border:1px solid #396516;font-weight:bold;}
+button.finish:hover{background-color:#8fc400;}
+button.continue{background-color:#207CE5;border:1px solid #0054BC;font-weight:bold;}
+button.continue:hover{background-color:#499bea;}
+button.dokify{background-color:#FFB600 ;border:1px solid #E7A500;font-weight:bold;}
+button.dokify:hover{background-color:#ffbc16;}
+button.dokify:active{box-shadow: none; border: 1px solid #e7a500}

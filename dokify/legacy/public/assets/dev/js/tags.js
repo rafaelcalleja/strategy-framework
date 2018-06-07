@@ -1,0 +1,4 @@
+define(["vendor/typeahead.bundle.min","vendor/bootstrap-tagsinput.min"],function(){function a(d){var f,c,g,b;d=$(d);f=d.data("values");c=Object.keys(f);
+g=d.data("class-default");b=d.data("class-prefix");var e=new Bloodhound({datumTokenizer:Bloodhound.tokenizers.whitespace,queryTokenizer:Bloodhound.tokenizers.whitespace,local:c});
+e.initialize();d.tagsinput({tagClass:function(i){var h;if(f.hasOwnProperty(i)){h=f[i];}else{h=g;}return b+h;},typeaheadjs:[{hint:true,highlight:true,minLength:1},{name:"tags",source:e.ttAdapter(),display:function(h){return h;
+}}]});}a.init=function(){return new a(this);};return a;});

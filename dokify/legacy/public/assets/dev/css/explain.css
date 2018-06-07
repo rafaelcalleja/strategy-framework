@@ -1,0 +1,58 @@
+/*
+Syntax error: Illegal nesting: Nothing may be nested beneath variable declarations.
+        on line 11 of /home/jandres/www/dokify/src/js/explain.js
+
+6: 		// class vars
+7: 		this.dom 	= dom;
+8: 		this.form 	= dom.form;
+9: 
+10: 		$(this.dom).click(function (e) {
+11: 			e.preventDefault();
+12: 			self.show();
+13: 		});
+14: 	}
+15: 
+16: 	Explain.prototype.show = function () {
+
+Backtrace:
+/home/jandres/www/dokify/src/js/explain.js:11
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/engine.rb:623:in `parse_variable'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/engine.rb:562:in `parse_line'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/engine.rb:471:in `build_tree'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/engine.rb:490:in `append_children'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/engine.rb:489:in `each'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/engine.rb:489:in `append_children'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/engine.rb:480:in `build_tree'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/engine.rb:473:in `each'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/engine.rb:473:in `build_tree'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/engine.rb:490:in `append_children'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/engine.rb:489:in `each'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/engine.rb:489:in `append_children'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/engine.rb:480:in `build_tree'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/engine.rb:473:in `each'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/engine.rb:473:in `build_tree'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/engine.rb:490:in `append_children'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/engine.rb:489:in `each'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/engine.rb:489:in `append_children'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/engine.rb:345:in `_to_tree'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/engine.rb:315:in `_render'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/engine.rb:262:in `render'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/plugin/compiler.rb:362:in `update_stylesheet'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/plugin/compiler.rb:203:in `update_stylesheets'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/plugin/compiler.rb:201:in `each'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/plugin/compiler.rb:201:in `update_stylesheets'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/plugin/compiler.rb:235:in `watch'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/plugin.rb:107:in `send'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/plugin.rb:107:in `method_missing'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/exec.rb:452:in `watch_or_update'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/exec.rb:315:in `process_result'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/exec.rb:41:in `parse'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/../lib/sass/../sass/exec.rb:21:in `parse!'
+/var/lib/gems/1.8/gems/sass-3.2.9/bin/sass:9
+/usr/local/bin/sass:23:in `load'
+/usr/local/bin/sass:23
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Syntax error: Illegal nesting: Nothing may be nested beneath variable declarations.\A         on line 11 of /home/jandres/www/dokify/src/js/explain.js\A \A 6: 		// class vars\A 7: 		this.dom 	= dom;\A 8: 		this.form 	= dom.form;\A 9: \A 10: 		$(this.dom).click(function (e) {\A 11: 			e.preventDefault();\A 12: 			self.show();\A 13: 		});\A 14: 	}\A 15: \A 16: 	Explain.prototype.show = function () {"; }

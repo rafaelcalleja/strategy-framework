@@ -1,0 +1,5 @@
+define(["storage/engine/sessioncache","storage/engine/localcache","storage/engine/memorycache"],function(f,c,d){function e(){this.storageEngine=a();this.itemFactory=this.storageEngine.itemFactory;
+}function a(){if(true===b("sessionStorage")){return new f;}if(true===b("localStorage")){return new c;}return new d;}function b(h){try{var j=window[h],g="__storage_test__";
+j.setItem(g,g);j.removeItem(g);return true;}catch(i){return false;}}e.prototype.clear=function(){this.storageEngine.clear();};e.prototype.remove=function(g){this.storageEngine.remove(g);
+};e.prototype.exist=function(g){try{return this.storageEngine.exist(g);}catch(h){return false;}};e.prototype.get=function(g){try{return this.storageEngine.get(g);
+}catch(h){return null;}};e.prototype.set=function(g,i,h){try{this.storageEngine.set(g,i,h);}catch(j){this.storageEngine=a();}};return e;});
