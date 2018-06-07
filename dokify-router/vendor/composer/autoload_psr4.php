@@ -6,18 +6,10 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'Symfony\\Polyfill\\Mbstring\\' => array($vendorDir . '/symfony/polyfill-mbstring'),
     'Symfony\\Polyfill\\Ctype\\' => array($vendorDir . '/symfony/polyfill-ctype'),
     'Symfony\\Component\\Yaml\\' => array($vendorDir . '/symfony/yaml'),
     'Symfony\\Component\\Routing\\' => array($vendorDir . '/symfony/routing'),
-    'Symfony\\Component\\HttpKernel\\' => array($vendorDir . '/symfony/http-kernel'),
-    'Symfony\\Component\\HttpFoundation\\' => array($vendorDir . '/symfony/http-foundation'),
-    'Symfony\\Component\\Finder\\' => array($vendorDir . '/symfony/finder'),
     'Symfony\\Component\\Filesystem\\' => array($vendorDir . '/symfony/filesystem'),
-    'Symfony\\Component\\EventDispatcher\\' => array($vendorDir . '/symfony/event-dispatcher'),
-    'Symfony\\Component\\Debug\\' => array($vendorDir . '/symfony/debug'),
     'Symfony\\Component\\Config\\' => array($vendorDir . '/symfony/config'),
-    'Symfony\\Cmf\\Component\\Routing\\' => array($vendorDir . '/symfony-cmf/routing/src'),
-    'Psr\\Log\\' => array($vendorDir . '/psr/log/Psr/Log'),
     'Dokify\\Router\\' => array($baseDir . '/src'),
 );

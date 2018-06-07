@@ -39,9 +39,7 @@ function getRouterUsingCache()
         new YamlFileLoader(new FileLocator([$routesDirectoryLegacy])),
         'routes.yaml',
         [
-            'cache_dir' => __DIR__.'/../var/cache',
-            'generator_cache_class' => 'ProjectUrlGeneratorLegacy',
-            'matcher_cache_class' => 'ProjectUrlMatcherLegacy'
+            'cache_dir' => __DIR__.'/../var/cache'
         ],
         new RequestContext()
     );
@@ -56,10 +54,7 @@ function getRouterWithoutCache()
     return new Router(
         new YamlFileLoader(new FileLocator([$routesDirectoryLegacy])),
         'routes.yaml',
-        [
-            'generator_cache_class' => 'ProjectUrlGeneratorLegacy',
-            'matcher_cache_class' => 'ProjectUrlMatcherLegacy'
-        ],
+        [],
         new RequestContext()
     );
 }
@@ -108,6 +103,10 @@ function testGenerateRoute(Router $router) {
 function clearCacheDir()
 {
     $dir = __DIR__.'/../var/cache/';
+    if (false === file_exists($dir)) {
+        return;
+    }
+
     $di = new RecursiveDirectoryIterator($dir, FilesystemIterator::SKIP_DOTS);
     $ri = new RecursiveIteratorIterator($di, RecursiveIteratorIterator::CHILD_FIRST);
     foreach ( $ri as $file ) {
@@ -125,3 +124,5 @@ $router = getRouterUsingCache();
 testMatchingRouteWithSamePort($router);
 testMatchingRouteWithOtherPort($router);
 testGenerateRoute($router);
+
+getRouterUsingCache()->getMatcher(); // finalemnte generaramos cache y tenemos los archivos para debug en var/cache

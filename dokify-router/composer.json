@@ -13,12 +13,9 @@
             "Dokify\\Router\\": "src/"
         }
     },
-    "minimum-stability": "dev",
     "require": {
-        "symfony/routing": "^4.2@dev",
-        "symfony/config": "^4.2@dev",
-        "symfony/yaml": "^4.2@dev",
-        "symfony/finder": "^4.2@dev",
-        "symfony-cmf/routing": "^2.1@dev"
+        "symfony/routing": "^4.1",
+        "symfony/config": "^4.1",
+        "symfony/yaml": "^4.1"
     }
 }
