@@ -22,18 +22,15 @@ assert_options(ASSERT_QUIET_EVAL, 0);
 
 });*/
 
+use Dokify\Router\Infrastructure\Services\Routing\Symfony\Router;
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
 use Symfony\Component\Routing\Loader\YamlFileLoader;
 use Symfony\Component\Routing\RequestContext;
-use Dokify\Router\Routing\Router;
-
-
-
 
 function getRouterUsingCache()
 {
-    $routesDirectoryLegacy = __DIR__ . '/../config/routes/legacy/';
+    $routesDirectoryLegacy = __DIR__ . '/../config/routes/';
 
     return new Router(
         new YamlFileLoader(new FileLocator([$routesDirectoryLegacy])),
@@ -49,7 +46,7 @@ function getRouterUsingCache()
 
 function getRouterWithoutCache()
 {
-    $routesDirectoryLegacy = __DIR__ . '/../config/routes/legacy/';
+    $routesDirectoryLegacy = __DIR__ . '/../config/routes/';
 
     return new Router(
         new YamlFileLoader(new FileLocator([$routesDirectoryLegacy])),

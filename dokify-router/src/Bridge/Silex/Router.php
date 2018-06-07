@@ -1,6 +1,6 @@
 <?php
 
-namespace Dokify\Router\Bridge\Silex\Router;
+namespace Dokify\Router\Bridge\Silex;
 
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Matcher\RequestMatcherInterface;
