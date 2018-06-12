@@ -53,7 +53,7 @@ interface RoutingInterface
      *
      * The special parameter _fragment will be used as the document fragment suffixed to the final URL.
      *
-     * @param string $routeName          The name of the route
+     * @param string $routeName     The name of the route
      * @param mixed  $parameters    An array of parameters
      * @param int    $referenceType The type of reference to be generated (one of the constants)
      *
@@ -64,5 +64,15 @@ interface RoutingInterface
      * @throws InvalidParameterException           When a parameter value for a placeholder is not correct because
      *                                             it does not match the requirement
      */
-    public function generate(string $routeName, array $parameters, int $referenceType);
+    public function generate(
+        string $routeName,
+        array $parameters,
+        int $referenceType,
+        string $baseUrl = '',
+        string $path = '',
+        string $host = '',
+        string $scheme = '',
+        int $httpPort = 80,
+        int $httpsPort = 443
+    );
 }

@@ -557,6 +557,10 @@ EOF;
 
         $code .= <<<'EOF'
 
+            if (isset($ret['_httpsPort']) && (int) $context->getHttpsPort() !== (int) $ret['_httpsPort']){
+                break;
+            }         
+               
             $hasRequiredScheme = !$requiredSchemes || isset($requiredSchemes[$context->getScheme()]);
             if ($requiredMethods && !isset($requiredMethods[$canonicalMethod]) && !isset($requiredMethods[$requestMethod])) {
                 if ($hasRequiredScheme) {

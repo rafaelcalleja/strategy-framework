@@ -2,7 +2,8 @@
 
 namespace Dokify\Router\Application\Service;
 
-use Dokify\Router\Domain\RepositoryInterface;
+use Dokify\Router\Domain\Match\MatchException;
+use Dokify\Router\Domain\Router\RouterException;
 use Dokify\Router\Domain\RoutingInterface;
 
 class MatchRequestHandler
@@ -19,15 +20,23 @@ class MatchRequestHandler
 
     public function execute(MatchRequestCommand $command)
     {
-        return $this->externalRoutingService->match(
-            $command->getBaseUrl(),
-            $command->getMethod(),
-            $command->getHost(),
-            $command->getScheme(),
-            $command->getHttpPort(),
-            $command->getHttpsPort(),
-            $command->getPath(),
-            $command->getQueryString()
-        );
+        try{
+            return $this->externalRoutingService->match(
+                $command->getBaseUrl(),
+                $command->getMethod(),
+                $command->getHost(),
+                $command->getScheme(),
+                $command->getHttpPort(),
+                $command->getHttpsPort(),
+                $command->getPath(),
+                $command->getQueryString()
+            );
+        }catch (RouterException $e) {
+            return [
+                'exception' => get_class($e),
+                'message' => $e->getMessage(),
+                'code' => $e->getCode(),
+            ];
+        }
     }
 }
